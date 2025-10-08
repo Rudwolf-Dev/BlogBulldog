@@ -89,6 +89,7 @@ const deportes = ref([
   { nombre: "Tochito Bandera" }
 ])
 </script>
+
 <style scoped>
 /*
  * NOTA: Este código utiliza las variables definidas en la configuración global de temas:

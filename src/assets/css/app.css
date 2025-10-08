@@ -35,7 +35,7 @@
 /* === Tema oscuro === */
 [data-bs-theme="dark"] {
   /* Colores principales de la paleta */
-  --color-bg: #000000; /* Fondo principal: Negro */
+  --color-bg: var(--bg-dark); /* Fondo principal: Negro */
   --color-text: #ffffff; /* Texto principal: Blanco */
   --color-card: #1e3c93; /* Fondo de tarjetas: Azul Oscuro */
   --color-accent: #ffc83a; /* Acento principal: Amarillo Brillante (Institucional) */
@@ -43,7 +43,7 @@
   --color-blue: #598bc6; /* Azul: Azul Medio (Primario para botones/bordes) */
 
   /* Variables específicas (mapeo) */
-  --bg-color: var(--color-bg);
+  --bg-color: var(--bg-dark);
   --text-color: var(--color-text);
   --card-bg: var(--color-card);
   --card-hover: #0c0c0c;
@@ -63,4 +63,6 @@ html, body {
   height: 100%;
   margin: 0;
   background-color: var(--bg-color);
+  color: var(--color-text);
+  transition: background-color 0.8s, color 0.8s;
 }

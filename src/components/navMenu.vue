@@ -25,7 +25,7 @@
             <router-link class="nav-link text-white fw-semibold px-3" to="/info">Información</router-link>
           </li>
         </ul>
-
+<!--
         <button
           id="btnTema"
           @click="cambiarTema"
@@ -33,7 +33,7 @@
           :class="tema == 'light' ? 'btn-outline-light' : 'btn-outline-warning'"
         >
           <i :class="tema == 'light' ? 'bi bi-moon-fill' : 'bi bi-sun-fill'"></i>
-        </button>
+        </button> -->
       </div>
     </div>
   </nav>
@@ -71,21 +71,25 @@ onMounted(() => {
 
 <style scoped>
 .nav-bulldog {
-  background-color: var(--color-accent);
-  border-bottom: 4px solid var(--color-accent-secondary);
+  /* Fondo principal: El rojo/vino oscuro de la paleta. */
+  background-color: #a30e1a;
+  /* Borde de acento: El amarillo brillante. */
+  border-bottom: 4px solid #ffc83a;
+  /* Mantengo las fuentes y espaciado originales. */
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.5px;
 }
 
 .nav-bulldog .nav-link {
   transition: background-color 0.2s, color 0.2s;
-  color: var(--color-card);
 }
 
 .nav-bulldog .nav-link:hover,
 .nav-bulldog .router-link-active {
-  background-color: var(--color-accent-secondary);
-  color: var(--color-text) !important;
+  /* Fondo al pasar el ratón/activo: El amarillo brillante. */
+  background-color: #ffc83a;
+  /* Color del texto: Negro para un contraste claro sobre el amarillo. */
+  color: #000000 !important;
   border-radius: 4px;
 }
 </style>
