@@ -16,8 +16,8 @@
     <!-- Bloque de bienvenida -->
     <section class="welcome-section text-center">
       <div class="container py-5">
-        <div class="speech-wrapper d-flex justify-content-center align-items-center">
-          <img src="./../assets/img/Bulldog.png" class="bg-dark rounded-5" alt="Bulldog" width="220">
+        <div class="speech-wrapper d-flex align-items-center">
+          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="220">
           <div class="speech-bubble-main me-3">
             <p class="mb-0 fw-semibold">¡Bienvenido!</p>
           </div>
@@ -119,15 +119,24 @@ const deportes = ref([
 }
 
 /* ---------- BURBUJA DE BIENVENIDA ---------- */
+.speech-wrapper img{
+  background: url('./../assets/img/bulldog-back');
+  border-radius: 50%;
+}
+
 .speech-wrapper {
   margin-top: 20px;
+  margin-left: 15px;
 }
 
 .speech-bubble-main {
   /* Fondo: Blanco (Color de tarjeta) */
   background: var(--color-card);
   /* Borde: Naranja de la paleta. */
-  border: 3px solid #fe7200;
+  border-top: 3px solid #5d151b;
+  border-left: 3px solid #5d151b;
+  border-bottom: 3px solid #fe7200;
+  border-right: 3px solid #fe7200;
   border-radius: 12px;
   padding: 14px 20px;
   position: relative;
