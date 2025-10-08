@@ -4,12 +4,12 @@
     <!-- Encabezado superior -->
     <header class="header-bulldog text-white py-3">
       <div class="container d-flex justify-content-between align-items-center">
-        <img src="" alt="UANL" height="60" />
+        <img src="./../assets/img/UANL-logo.png" alt="UANL" height="60" />
         <div class="text-center">
           <h1 class="fw-bold title-bulldog">BLOG BULLDOG</h1>
           <h4 class="fw-semibold mb-0">EIAO Linares</h4>
         </div>
-        <img src="" alt="EIAO" height="60" />
+        <img src="./../assets/img/EIAO-logo.png" alt="EIAO" height="60" />
       </div>
     </header>
 
@@ -17,10 +17,10 @@
     <section class="welcome-section text-center">
       <div class="container py-5">
         <div class="speech-wrapper d-flex justify-content-center align-items-center">
+          <img src="./../assets/img/Bulldog.png" class="bg-dark rounded-5" alt="Bulldog" width="220">
           <div class="speech-bubble-main me-3">
             <p class="mb-0 fw-semibold">¡Bienvenido!</p>
           </div>
-          <img src="" alt="Bulldog" width="120">
         </div>
       </div>
     </section>
@@ -139,7 +139,7 @@ const deportes = ref([
 .speech-bubble-main::after {
   content: "";
   position: absolute;
-  right: -18px;
+  left: -18px;
   top: 50%;
   transform: translateY(-50%);
   border-width: 10px;
