@@ -1,182 +1,195 @@
 <template>
-  <div>
+  <div class="home-bulldog">
+
     <!-- Encabezado superior -->
-    <header class="bg-primary text-white py-3">
+    <header class="header-bulldog text-white py-3">
       <div class="container d-flex justify-content-between align-items-center">
-        <img alt="Uanl" />
-        <h1 class="display-3 fw-bold">BLOG BULLDOG</h1>
-        <img alt="EIAO" />
+        <img src="" alt="UANL" height="60" />
+        <div class="text-center">
+          <h1 class="fw-bold title-bulldog">BLOG BULLDOG</h1>
+          <h4 class="fw-semibold mb-0">EIAO Linares</h4>
+        </div>
+        <img src="" alt="EIAO" height="60" />
       </div>
-      <h4 class="text-md-center">EIAO Linares</h4>
     </header>
 
-    <!-- Título central con logo/mascota -->
-    <section class="text-center my-5">
-      <h1 class="display-3 fw-bold">BLOG BULLDOG</h1>
-      <div class="d-flex justify-content-center align-items-center mt-3">
-        <!-- Burbuja de diálogo -->
-        <div class="speech-bubble me-3">
-          <p class="mb-0">¡Bienvenido!</p>
+    <!-- Bloque de bienvenida -->
+    <section class="welcome-section text-center">
+      <div class="container py-5">
+        <div class="speech-wrapper d-flex justify-content-center align-items-center">
+          <div class="speech-bubble-main me-3">
+            <p class="mb-0 fw-semibold">¡Bienvenido!</p>
+          </div>
+          <img src="" alt="Bulldog" width="120">
         </div>
-        <!-- Mascota/logo -->
-        <img src="" alt="Bulldog" width="100">
       </div>
     </section>
-      <div>
-        <h2 class="text-center mb-5 fw-bold">NUESTRAS ACTIVIDADES EXTRACURRICULARES</h2>
 
-        <!-- Clubs -->
-        <section class="container my-5">
-          <h3 class="text-center mb-4 text-primary">Clubs</h3>
-          <div class="row g-4">
-            <div v-for="taller in talleres" :key="taller.nombre" class="col-md-6">
-              <div class="actividad-card">
-                <!-- Círculo -->
-                <div class="circle me-3">
-                  <span>{{ taller.nombre[0] }}</span>
-                </div>
-                <!-- Texto -->
-                <div class="flex-grow-1">
-                  <h5 class="actividad-titulo">{{ taller.nombre }}</h5>
-                  <p class="actividad-desc">{{ taller.descripcion }}</p>
-                  <!-- Bulldog narrador -->
-                  <div class="d-flex align-items-start mt-3">
-                    <img src="" alt="Bulldog" class="bulldog-img me-3">
-                    <div class="speech-bubble">
-                      <p class="mb-0">{{ taller.introduccion }}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+    <!-- Actividades extracurriculares -->
+    <section class="bg-yellow py-4">
+      <h2 class="text-center fw-bold text-uppercase mb-4">Nuestras Actividades Extracurriculares</h2>
+    </section>
 
-        <!-- Deportes -->
-        <section class="container my-5">
-          <h3 class="text-center mb-4 text-primary">Deportes</h3>
-          <div class="row g-4">
-            <div v-for="deporte in deportes" :key="deporte.nombre" class="col-md-6">
-              <div class="actividad-card">
-                <!-- Círculo -->
-                <div class="circle me-3">
-                  <span>{{ deporte.nombre[0] }}</span>
-                </div>
-                <!-- Texto -->
-                <div class="flex-grow-1">
-                  <h5 class="actividad-titulo">{{ deporte.nombre }}</h5>
-                  <p class="actividad-desc">{{ deporte.descripcion }}</p>
-                  <!-- Bulldog narrador -->
-                  <div class="d-flex align-items-start mt-3">
-                    <img src="" alt="Bulldog" class="bulldog-img me-3">
-                    <div class="speech-bubble">
-                      <p class="mb-0">{{ deporte.introduccion }}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <!-- Clubes -->
+    <section class="container my-5">
+      <h3 class="fw-bold text-uppercase mb-4">Clubes y Talleres</h3>
+      <div class="row g-4 justify-content-center">
+        <div v-for="taller in talleres" :key="taller.nombre" class="col-lg-4 col-md-6">
+          <div class="actividad-card">
+            <div class="circle">
+              <span>{{ taller.nombre[0] }}</span>
             </div>
+            <p class="actividad-nombre">{{ taller.nombre }}</p>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
-    </template>
+    </section>
 
-    <script setup scoped>
-      import { ref } from 'vue'
+    <!-- Deportes -->
+    <section class="container my-5">
+      <h3 class="fw-bold text-uppercase mb-4">Deportes</h3>
+      <div class="row g-4 justify-content-center">
+        <div v-for="deporte in deportes" :key="deporte.nombre" class="col-lg-4 col-md-6">
+          <div class="actividad-card">
+            <div class="circle">
+              <span>{{ deporte.nombre[0] }}</span>
+            </div>
+            <p class="actividad-nombre">{{ deporte.nombre }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      const talleres = ref([
-        { nombre: "Banda de Guerra", descripcion: "Disciplina y ritmo en cada toque.", introduccion: "Aquí aprenderás a coordinarte y representar con orgullo a la escuela." },
-        { nombre: "Club de Ajedrez", descripcion: "Estrategia y concentración.", introduccion: "Un espacio para mentes brillantes que disfrutan del reto intelectual." },
-        { nombre: "Club de Artes", descripcion: "Creatividad en cada trazo.", introduccion: "Si te gusta pintar, dibujar o crear, este es tu lugar." },
-        { nombre: "Danza Folklórica", descripcion: "Tradición y cultura en movimiento.", introduccion: "Bailarás con orgullo nuestras raíces mexicanas." },
-        { nombre: "Club de Música", descripcion: "Melodías que inspiran.", introduccion: "Aquí podrás tocar, cantar y compartir tu talento musical." },
-        { nombre: "Periodismo", descripcion: "Comunicación y expresión.", introduccion: "Aprenderás a contar historias y dar voz a tu comunidad." },
-        { nombre: "Club de Lectura", descripcion: "Un viaje a través de los libros.", introduccion: "Descubre mundos nuevos en cada página." },
-        { nombre: "Club de Videojuegos", descripcion: "Diversión y estrategia digital.", introduccion: "Comparte tu pasión gamer con otros compañeros." },
-        { nombre: "Lenguaje de Señas", descripcion: "Comunicación inclusiva.", introduccion: "Aprenderás a expresarte y conectar con más personas." },
-        { nombre: "EcoBulldog", descripcion: "Cuidado del medio ambiente.", introduccion: "Juntos podemos hacer un cambio positivo en nuestra escuela." },
-        { nombre: "Taller de Robótica", descripcion: "Innovación y tecnología.", introduccion: "Construye, programa y da vida a tus ideas." }
-      ])
+  </div>
+</template>
 
-      const deportes = ref([
-        { nombre: "Softbol y Béisbol", descripcion: "Trabajo en equipo y precisión.", introduccion: "Un deporte lleno de energía y estrategia." },
-        { nombre: "Handball", descripcion: "Velocidad y coordinación.", introduccion: "Perfecto para quienes disfrutan la acción rápida." },
-        { nombre: "Fútbol Asociación", descripcion: "Pasión y compañerismo.", introduccion: "El deporte rey, donde cada gol une a todos." },
-        { nombre: "Básquetbol", descripcion: "Agilidad y puntería.", introduccion: "Cada enceste es un logro compartido." },
-        { nombre: "Voleibol de Sala", descripcion: "Trabajo en equipo y reflejos.", introduccion: "Un juego dinámico que fortalece la unión." },
-        { nombre: "Tochito Bandera", descripcion: "Velocidad y estrategia.", introduccion: "Diversión asegurada en cada jugada." }
-      ])
-    </script>
+<script setup>
+import { ref } from 'vue'
 
-    <style scoped>
-      /* Tarjeta de actividad */
-      .actividad-card {
-        display: flex;
-        align-items: flex-start;
-        background: #ffffff;
-        border: 1px solid #dee2e6;
-        border-radius: 12px;
-        padding: 20px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
+const talleres = ref([
+  { nombre: "Banda de Guerra" },
+  { nombre: "Club de Ajedrez" },
+  { nombre: "Club de Artes" },
+  { nombre: "Danza Folklórica" },
+  { nombre: "Club de Música" },
+  { nombre: "Periodismo" },
+  { nombre: "Club de Lectura" },
+  { nombre: "Club de Videojuegos" },
+  { nombre: "Lenguaje de Señas" },
+  { nombre: "EcoBulldog" },
+  { nombre: "Taller de Robótica" }
+])
 
-        .actividad-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
+const deportes = ref([
+  { nombre: "Softbol y Béisbol" },
+  { nombre: "Handball" },
+  { nombre: "Fútbol Asociación" },
+  { nombre: "Básquetbol" },
+  { nombre: "Voleibol de Sala" },
+  { nombre: "Tochito Bandera" }
+])
+</script>
+<style scoped>
+/*
+ * NOTA: Este código utiliza las variables definidas en la configuración global de temas:
+ * --color-bg, --color-text, --color-card, --color-accent, --color-accent-secondary, --color-blue
+*/
 
-      /* Círculo */
-      .circle {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background: #0d6efd;
-        color: white;
-        font-size: 1.6rem;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+.home-bulldog {
+  /* Fondo principal: Usa el color de fondo general del tema. */
+  background-color: var(--color-bg);
+  font-family: 'Open Sans', sans-serif;
+}
 
-      /* Títulos y descripciones */
-      .actividad-titulo {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 6px;
-      }
+/* ---------- ENCABEZADO ---------- */
+.header-bulldog {
+  /* Fondo: Acento principal (Rojo oscuro en claro, Amarillo brillante en oscuro) */
+  background-color: var(--color-accent);
+  /* Borde inferior: Acento secundario (Amarillo brillante en claro, Rojo oscuro en oscuro) */
+  border-bottom: 6px solid var(--color-accent-secondary);
+  /* Color del texto: Fijo en blanco o color de tarjeta para contraste sobre el fondo acentuado */
+  color: var(--color-card);
+  text-align: center;
+}
 
-      .actividad-desc {
-        font-size: 0.95rem;
-        color: #555;
-        margin-bottom: 0;
-      }
+.title-bulldog {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
 
-      /* Bulldog narrador */
-      .bulldog-img {
-        width: 60px;
-        height: auto;
-      }
+/* ---------- BURBUJA DE BIENVENIDA ---------- */
+.speech-wrapper {
+  margin-top: 20px;
+}
 
-      .speech-bubble {
-        position: relative;
-        background: #f8f9fa;
-        border: 2px solid #0d6efd;
-        border-radius: 10px;
-        padding: 10px 14px;
-        max-width: 300px;
-        font-size: 0.9rem;
-        line-height: 1.4;
-      }
+.speech-bubble-main {
+  /* Fondo: Blanco (Color de tarjeta) */
+  background: var(--color-card);
+  /* Borde: Naranja de la paleta. */
+  border: 3px solid #fe7200;
+  border-radius: 12px;
+  padding: 14px 20px;
+  position: relative;
+  font-size: 1.1rem;
+  /* Texto: Negro (Color de texto principal) */
+  color: var(--color-text);
+}
 
-        .speech-bubble::after {
-          content: "";
-          position: absolute;
-          left: -12px;
-          top: 15px;
-          border-width: 12px;
-          border-style: solid;
-          border-color: transparent #0d6efd transparent transparent;
-        }
-    </style>
+.speech-bubble-main::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  /* Color de la punta: Mismo naranja que el borde */
+  border-color: transparent transparent transparent #fe7200;
+}
+
+/* ---------- SECCIÓN AMARILLA ---------- */
+.bg-yellow {
+  /* Fondo: Acento secundario (Amarillo brillante en claro, Rojo oscuro en oscuro) */
+  background-color: var(--color-accent-secondary);
+  /* Texto: Color de texto principal (Negro en claro, Blanco en oscuro) */
+  color: var(--color-text);
+}
+
+/* ---------- TARJETAS DE CLUBES / DEPORTES ---------- */
+.actividad-card {
+  /* Fondo: Blanco (Color de tarjeta) */
+  background: var(--color-card);
+  border-radius: 8px;
+  padding: 30px 0;
+  text-align: center;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.actividad-card:hover {
+  transform: translateY(-5px);
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  /* Fondo del círculo: El azul oscuro de la paleta */
+  background: var(--color-blue);
+  /* Texto del círculo: Blanco (Color de tarjeta) */
+  color: var(--color-card);
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.actividad-nombre {
+  font-weight: 600;
+  /* Texto del nombre: Negro (Color de texto principal) */
+  color: var(--color-text);
+  font-size: 1rem;
+}
+</style>

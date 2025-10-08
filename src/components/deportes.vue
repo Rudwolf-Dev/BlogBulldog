@@ -114,13 +114,41 @@
 </script>
 
 <style scoped>
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-    background: #f0f4f8;
-  }
+/* === Aplicación de las variables === */
+section {
+  color: var(--text-color);
+}
 
-  .badge {
-    font-size: 0.75rem;
-  }
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.input-group-text {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-color);
+}
+
+.form-control {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-color);
+}
+
+.form-control::placeholder {
+  /* Usamos un color fijo para el placeholder, ya que 'rgba(var(--text-color), 0.7)' no es un formato CSS válido */
+  color: rgba(150, 150, 150, 0.7);
+}
+
+.alert {
+  background-color: var(--alert-bg);
+  color: var(--alert-text);
+  border: none;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
 </style>

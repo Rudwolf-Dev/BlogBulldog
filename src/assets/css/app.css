@@ -1,3 +1,66 @@
 @import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
-@import "footer.css";
+/*
+ * === VARIABLES GLOBALES DE TEMA (app.css) ===
+ * Adaptadas a la paleta institucional: Rojo, Amarillo, Azul.
+*/
+
+/* === Tema claro === */
+:root,
+[data-bs-theme="light"] {
+  /* Colores principales de la paleta */
+  --color-bg: #ccc3af; /* Fondo principal: Beige/Gris claro */
+  --color-text: #000000; /* Texto principal: Negro */
+  --color-card: #ffffff; /* Fondo de tarjetas: Blanco */
+  --color-accent: #a30e1a; /* Acento principal: Rojo Oscuro (Institucional) */
+  --color-accent-secondary: #ffc83a; /* Acento secundario: Amarillo Brillante (Institucional) */
+  --color-blue: #1e3c93; /* Azul: Azul Oscuro (Primario para botones/bordes) */
+
+  /* Variables específicas (mapeo) */
+  --bg-color: var(--color-bg);
+  --text-color: var(--color-text);
+  --card-bg: var(--color-card);
+  --card-hover: #f0f0f0;
+  --primary: var(--color-blue);
+  --accent: var(--color-accent-secondary);
+
+  /* Variables de formularios y alertas */
+  --card-border: var(--color-blue);
+  --input-bg: var(--color-card);
+  --input-border: #ccc3af;
+  --alert-bg: var(--color-accent-secondary);
+  --alert-text: var(--color-text);
+}
+
+/* === Tema oscuro === */
+[data-bs-theme="dark"] {
+  /* Colores principales de la paleta */
+  --color-bg: #000000; /* Fondo principal: Negro */
+  --color-text: #ffffff; /* Texto principal: Blanco */
+  --color-card: #1e3c93; /* Fondo de tarjetas: Azul Oscuro */
+  --color-accent: #ffc83a; /* Acento principal: Amarillo Brillante (Institucional) */
+  --color-accent-secondary: #a30e1a; /* Acento secundario: Rojo Oscuro (Institucional) */
+  --color-blue: #598bc6; /* Azul: Azul Medio (Primario para botones/bordes) */
+
+  /* Variables específicas (mapeo) */
+  --bg-color: var(--color-bg);
+  --text-color: var(--color-text);
+  --card-bg: var(--color-card);
+  --card-hover: #0c0c0c;
+  --primary: var(--color-blue);
+  --accent: var(--color-accent);
+
+  /* Variables de formularios y alertas */
+  --card-border: var(--color-blue);
+  --input-bg: var(--color-bg);
+  --input-border: #444444;
+  --alert-bg: var(--color-accent-secondary);
+  --alert-text: var(--color-text);
+}
+
+/* --- Estilos esenciales para el Sticky Footer (General) --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--bg-color);
+}
