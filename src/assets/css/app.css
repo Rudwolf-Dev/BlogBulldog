@@ -32,32 +32,6 @@
   --alert-text: var(--color-text);
 }
 
-/* === Tema oscuro === */
-[data-bs-theme="dark"] {
-  /* Colores principales de la paleta */
-  --color-bg: var(--bg-dark); /* Fondo principal: Negro */
-  --color-text: #ffffff; /* Texto principal: Blanco */
-  --color-card: #1e3c93; /* Fondo de tarjetas: Azul Oscuro */
-  --color-accent: #ffc83a; /* Acento principal: Amarillo Brillante (Institucional) */
-  --color-accent-secondary: #a30e1a; /* Acento secundario: Rojo Oscuro (Institucional) */
-  --color-blue: #598bc6; /* Azul: Azul Medio (Primario para botones/bordes) */
-
-  /* Variables específicas (mapeo) */
-  --bg-color: var(--bg-dark);
-  --text-color: var(--color-text);
-  --card-bg: var(--color-card);
-  --card-hover: #0c0c0c;
-  --primary: var(--color-blue);
-  --accent: var(--color-accent);
-
-  /* Variables de formularios y alertas */
-  --card-border: var(--color-blue);
-  --input-bg: var(--color-bg);
-  --input-border: #444444;
-  --alert-bg: var(--color-accent-secondary);
-  --alert-text: var(--color-text);
-}
-
 /* --- Estilos esenciales para el Sticky Footer (General) --- */
 html, body {
   height: 100%;
