@@ -38,35 +38,6 @@
   </nav>
 </template>
 
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const tema = ref('light')
-
-function aplicarTema(nuevoTema) {
-  tema.value = nuevoTema
-  document.body.setAttribute('data-bs-theme', tema.value)
-}
-
-function cambiarTema() {
-  aplicarTema(tema.value === 'light' ? 'dark' : 'light')
-  localStorage.setItem('tema', tema.value)
-}
-
-onMounted(() => {
-  const temaGuardado = localStorage.getItem('tema')
-  if (temaGuardado) {
-    aplicarTema(temaGuardado)
-    return
-  }
-
-  const prefiereOscuro = window.matchMedia('(prefers-color-scheme: dark)')
-  aplicarTema(prefiereOscuro.matches ? 'dark' : 'light')
-  prefiereOscuro.addEventListener('change', (e) => {
-    aplicarTema(e.matches ? 'dark' : 'light')
-  })
-})
-</script>
 
 <style scoped>
 .nav-bulldog {
