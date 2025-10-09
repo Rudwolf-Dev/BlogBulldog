@@ -1,11 +1,13 @@
 <template>
   <section class="py-5">
-    <div class="container">
-      <h2 class="mb-4">Sobre nosotros</h2>
-      <p>{{ sobreNosotros }}</p>
-
-      <h3 class="mt-5">Dudas</h3>
-      <p>{{ dudas }}</p>
+    <div class="container"
+      v-for="(Seccion, index) in Secciones"
+      :key="index">
+      <h2 class="mb-4">{{ Seccion.titulo }}</h2>
+      <p v-for="(parrafo, i) in Seccion.texto"
+      :key="i">
+      {{ parrafo }}
+    </p>
     </div>
   </section>
 </template>
@@ -13,8 +15,22 @@
 <script setup scoped>
   import { ref } from 'vue'
 
-  const sobreNosotros = ref("Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón. Cada uno aportó en diseño, programación y contenido para dar vida al Blog Bulldog.")
-  const dudas = ref("Si tienes dudas sobre los clubs culturales puedes dirigirte con la Mtra. Jaqueline Garza o en el caso de los deportes puedes preguntar en la oficina de Coordinación Deportiva.")
+  const Secciones = ref([
+    {
+    titulo: "Sobre Nosotros",
+    texto: [
+      "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
+      "Cada uno aportó en diseño, programación y contenido para dar vida al Blog Bulldog."
+      ]
+    },
+    {
+    titulo: "Aniversario 95°",
+    texto: [
+      "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
+      "Cada uno aportó en diseño, programación y contenido para dar vida al Blog Bulldog."
+      ]
+    }
+])
 </script>
 
 <style scoped>
