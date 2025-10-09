@@ -3,7 +3,13 @@
 ¿Como puedo iniciar a programar?
 
 ## Inicio
-para empezar debes clonar el repositorio, lo puedes hacer directamente desde [Git](https://git-scm.com/downloads) o usar [Github desktop](https://desktop.github.com/download/)
+Para empezar debes clonar el repositorio, lo puedes hacer directamente desde [Git](https://git-scm.com/downloads) o usar [Github desktop](https://desktop.github.com/download/)
+
+Si elegiste git deberas hacerlo con:
+```sh
+git clone https://github.com/Rudwolf-Dev/BlogBulldog.git
+```
+
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
