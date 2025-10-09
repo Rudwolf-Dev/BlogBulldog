@@ -4,20 +4,20 @@
     <!-- Encabezado superior -->
     <header class="header-bulldog text-white py-3">
       <div class="container d-flex justify-content-between align-items-center">
-        <img src="./../assets/img/UANL-logo.png" alt="UANL" height="60" />
+        <img src="./../assets/img/UANL-logo.png" alt="UANL" height="100" />
         <div class="text-center">
           <h1 class="fw-bold title-bulldog">BLOG BULLDOG</h1>
           <h4 class="fw-semibold mb-0">EIAO Linares</h4>
         </div>
-        <img src="./../assets/img/EIAO-logo.png" alt="EIAO" height="60" />
+        <img src="./../assets/img/EIAO-logo.png" alt="EIAO" height="100" />
       </div>
     </header>
 
     <!-- Bloque de bienvenida -->
     <section class="welcome-section text-center">
-      <div class="container py-5">
+      <div class="">
         <div class="speech-wrapper d-flex align-items-center">
-          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img bg-dark" alt="Bulldog" width="220">
+          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="220">
           <div class="speech-bubble-main me-3">
             <p class="mb-0 fw-semibold">¡Bienvenido!</p>
           </div>
@@ -26,8 +26,8 @@
     </section>
 
     <!-- Actividades extracurriculares -->
-    <section class="bg-yellow py-4">
-      <h2 class="text-center fw-bold text-uppercase mb-4">Nuestras Actividades Extracurriculares</h2>
+    <section class="bg-yellow py-5">
+      <h2 class="text-center fw-bold text-uppercase">Nuestras Actividades Extracurriculares</h2>
     </section>
 
     <!-- Clubes -->

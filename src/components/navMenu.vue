@@ -18,7 +18,7 @@
             <router-link class="nav-link text-white fw-semibold px-3" to="/actExt">Actividades Extracurriculares</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/deportes">Equipos Representativos</router-link>
+            <router-link class="nav-link text-white fw-semibold px-3" to="/equiposRep">Equipos Representativos</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link text-white fw-semibold px-3" to="/info">Información</router-link>

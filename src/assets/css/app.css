@@ -9,7 +9,7 @@
 :root,
 [data-bs-theme="light"] {
   /* Colores principales de la paleta */
-  --color-bg: #ccc3af; /* Fondo principal: Beige/Gris claro */
+  --color-bg: #ccc6b6; /* Fondo principal: Beige/Gris claro */
   --color-text: #000000; /* Texto principal: Negro */
   --color-card: #ffffff; /* Fondo de tarjetas: Blanco */
   --color-accent: #a30e1a; /* Acento principal: Rojo Oscuro (Institucional) */
