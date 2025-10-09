@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg nav-bulldog">
     <div class="container-fluid">
-      <router-link class="navbar-brand d-flex align-items-center text-white fw-bold p-2" to="/">
+      <router-link class="no-bg navbar-brand d-flex align-items-center text-white fw-bold p-2" to="/">
         BLOG BULLDOG
       </router-link>
 
@@ -9,10 +9,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse hover-secondary" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/">Inicio icono</router-link>
+            <router-link class="nav-link text-white fw-semibold px-3" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link text-white fw-semibold px-3" to="/actExt">Actividades Extracurriculares</router-link>
@@ -58,9 +58,14 @@
 .nav-bulldog .nav-link:hover,
 .nav-bulldog .router-link-active {
   /* Fondo al pasar el ratón/activo: El amarillo brillante. */
-  background-color: var(--color-accent-secondary);
   /* Color del texto: Negro para un contraste claro sobre el amarillo. */
-  color: #000000 !important;
+  color: white;
   border-radius: 4px;
+}
+
+.hover-secondary .router-link-active,
+.hover-secondary .nav-link:hover {
+  background-color: var(--color-accent-secondary);
+   color: #000000 !important;
 }
 </style>

@@ -11,7 +11,7 @@ import footMenu from './components/footMenu.vue';
     <main>
       <RouterView></RouterView>
     </main>
-    <footer class="footer-bulldog text-center py-3 mt-5">
+    <footer class="footer-bulldog text-center mt-4 pt-4 ">
       <footMenu></footMenu>
     </footer>
   </div>
@@ -92,17 +92,17 @@ section {
   /* Fondo principal: Usa el color de fondo general o el color de tarjeta para más contraste */
   background: linear-gradient(
     to bottom,
-    var(--color-accent-secondary) 33%,
-    var(--color-accent-secondary) 66%,
-    #fe7200 66%,
-    #fe7200 100%,
-    var(--color-accent) 0%,
-    var(--color-accent) 33%
+    #ffffff 0%,
+    #ffffff 80%,
+    var(--color-accent) 80%,
+    var(--color-accent) 100%
   );
   /* Color del texto: Usa el color de texto general del tema */
   color: var(--color-card);
 
   font-family: 'Open Sans', sans-serif;
   position: relative;
+  border-top: 12px solid var(--color-accent-secondary);
+  
 }
 </style>

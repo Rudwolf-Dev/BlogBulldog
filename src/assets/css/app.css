@@ -15,6 +15,7 @@
   --color-accent: #a30e1a; /* Acento principal: Rojo Oscuro (Institucional) */
   --color-accent-secondary: #ffc83a; /* Acento secundario: Amarillo Brillante (Institucional) */
   --color-blue: #1e3c93; /* Azul: Azul Oscuro (Primario para botones/bordes) */
+  --color-orange: #fe7200; /* Naranja: (Secundario para botones/bordes) */
 
   /* Variables específicas (mapeo) */
   --bg-color: var(--color-bg);
