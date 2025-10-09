@@ -13,7 +13,7 @@
 <script setup scoped>
   import { ref } from 'vue'
 
-  const sobreNosotros = ref("Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo, Sara y Sofía. Cada uno aportó en diseño, programación y contenido para dar vida al Blog Bulldog.")
+  const sobreNosotros = ref("Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón. Cada uno aportó en diseño, programación y contenido para dar vida al Blog Bulldog.")
   const dudas = ref("Si tienes dudas sobre los clubs culturales puedes dirigirte con la Mtra. Jaqueline Garza o en el caso de los deportes puedes preguntar en la oficina de Coordinación Deportiva.")
 </script>
 
