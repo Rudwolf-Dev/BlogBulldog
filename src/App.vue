@@ -90,7 +90,15 @@ section {
 }
 .footer-bulldog {
   /* Fondo principal: Usa el color de fondo general o el color de tarjeta para más contraste */
-  background-color: var(--color-text);
+  background: linear-gradient(
+    to bottom,
+    var(--color-accent-secondary) 33%,
+    var(--color-accent-secondary) 66%,
+    #fe7200 66%,
+    #fe7200 100%,
+    var(--color-accent) 0%,
+    var(--color-accent) 33%
+  );
   /* Color del texto: Usa el color de texto general del tema */
   color: var(--color-card);
 
