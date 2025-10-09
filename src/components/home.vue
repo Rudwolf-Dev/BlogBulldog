@@ -17,7 +17,7 @@
     <section class="welcome-section text-center">
       <div class="container py-5">
         <div class="speech-wrapper d-flex align-items-center">
-          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="220">
+          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img bg-dark" alt="Bulldog" width="220">
           <div class="speech-bubble-main me-3">
             <p class="mb-0 fw-semibold">¡Bienvenido!</p>
           </div>
@@ -107,7 +107,7 @@ const deportes = ref([
   /* Fondo: Acento principal (Rojo oscuro en claro, Amarillo brillante en oscuro) */
   background-color: var(--color-accent);
   /* Borde inferior: Acento secundario (Amarillo brillante en claro, Rojo oscuro en oscuro) */
-  border-bottom: 6px solid var(--color-accent-secondary);
+  border-bottom: 6px solid var(--color-card);
   /* Color del texto: Fijo en blanco o color de tarjeta para contraste sobre el fondo acentuado */
   color: var(--color-card);
   text-align: center;
@@ -121,7 +121,8 @@ const deportes = ref([
 /* ---------- BURBUJA DE BIENVENIDA ---------- */
 .speech-wrapper img{
   background: url('./../assets/img/bulldog-back');
-  border-radius: 50%;
+  border-radius: 5% 45% 0 0;
+  margin-right: 45px;
 }
 
 .speech-wrapper {
@@ -148,10 +149,11 @@ const deportes = ref([
 .speech-bubble-main::after {
   content: "";
   position: absolute;
-  left: -18px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: -33px;
+  top: 85%;
+  transform: translateY(-50%) rotateZ(170deg);
   border-width: 10px;
+  border-left: 25px;
   border-style: solid;
   /* Color de la punta: Mismo naranja que el borde */
   border-color: transparent transparent transparent #fe7200;
@@ -202,4 +204,5 @@ const deportes = ref([
   color: var(--color-text);
   font-size: 1rem;
 }
+
 </style>

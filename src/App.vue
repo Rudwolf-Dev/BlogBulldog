@@ -11,7 +11,7 @@ import footMenu from './components/footMenu.vue';
     <main>
       <RouterView></RouterView>
     </main>
-    <footer>
+    <footer class="footer-bulldog text-center py-3 mt-5">
       <footMenu></footMenu>
     </footer>
   </div>
@@ -87,5 +87,14 @@ section {
   background-color: var(--alert-bg);
   color: var(--alert-text);
   border: none;
+}
+.footer-bulldog {
+  /* Fondo principal: Usa el color de fondo general o el color de tarjeta para más contraste */
+  background-color: var(--color-text);
+  /* Color del texto: Usa el color de texto general del tema */
+  color: var(--color-card);
+
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
 }
 </style>

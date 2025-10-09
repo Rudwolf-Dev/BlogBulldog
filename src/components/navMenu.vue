@@ -1,8 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg nav-bulldog">
     <div class="container-fluid">
-      <router-link class="navbar-brand d-flex align-items-center text-white fw-bold" to="/">
-        <img src="" alt="logo" width="40" class="me-2">
+      <router-link class="navbar-brand d-flex align-items-center text-white fw-bold p-2" to="/">
         BLOG BULLDOG
       </router-link>
 
@@ -72,9 +71,9 @@ onMounted(() => {
 <style scoped>
 .nav-bulldog {
   /* Fondo principal: El rojo/vino oscuro de la paleta. */
-  background-color: #a30e1a;
+  background-color: var(--color-accent);
   /* Borde de acento: El amarillo brillante. */
-  border-bottom: 4px solid #ffc83a;
+  border-bottom: 4px solid var(--color-card);
   /* Mantengo las fuentes y espaciado originales. */
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.5px;
@@ -82,12 +81,13 @@ onMounted(() => {
 
 .nav-bulldog .nav-link {
   transition: background-color 0.2s, color 0.2s;
+  margin: 0 10px 0 10px;
 }
 
 .nav-bulldog .nav-link:hover,
 .nav-bulldog .router-link-active {
   /* Fondo al pasar el ratón/activo: El amarillo brillante. */
-  background-color: #ffc83a;
+  background-color: var(--color-accent-secondary);
   /* Color del texto: Negro para un contraste claro sobre el amarillo. */
   color: #000000 !important;
   border-radius: 4px;

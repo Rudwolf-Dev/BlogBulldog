@@ -17,7 +17,6 @@
           <div class="card-body">
             <div class="d-flex align-items-center justify-content-between">
               <h5 class="card-title text-primary mb-0">{{ equipo.nombre }}</h5>
-              <span v-if="equipo.verificado" class="badge bg-success">Verificado</span>
             </div>
             <p class="mt-2"><strong>Descripción:</strong> {{ equipo.desc || 'Por confirmar' }}</p>
             <p><strong>Entrenador:</strong> {{ equipo.entrenador || 'Por confirmar' }}</p>
@@ -52,43 +51,37 @@
       nombre: "Tochito Bandera",
       desc: "Varonil y Femenil. Mar, Mié, Jue y Sáb",
       entrenador: "Lic. Román Garza",
-      img: "/tochito.png",
-      verificado: false
+      img: "src/assets/img/tochito.jpg",
     },
     {
       nombre: "Softbol y Béisbol",
       desc: "Varonil y Femenil. Mar-Jue 5:30-7:00pm. Polideportivo Tigers UANL Linares",
       entrenador: "Erick Martínez",
       img: "/softbol.png",
-      verificado: true
     },
     {
       nombre: "Handball",
       desc: "Varonil. Lunes y Viernes 6:00-7:30pm. Cancha Polivalente EIAO",
       entrenador: "Lic. Roberto Rincón",
-      img: "/handball.png",
-      verificado: true
+      img: "src/assets/img/handball.jpg",
     },
     {
       nombre: "Fútbol Asociación",
       desc: "Varonil y Femenil. Mar-Jue 6:00-7:30pm. Campos EIAO Unidad Linares",
       entrenador: "Lic. Roberto Rincón",
-      img: "/futbol.png",
-      verificado: true
+      img: "src/assets/img/Fut.jpg",
     },
     {
       nombre: "Básquetbol",
       desc: "Varonil y Femenil. Mar, Jue y Sáb",
       entrenador: "Emiliano Rodríguez",
-      img: "/basquetbol.png",
-      verificado: false
+      img: "src/assets/img/basquet.jpg",
     },
     {
       nombre: "Voleibol de Sala",
       desc: "Varonil y Femenil. Mar-Jue 1:00-2:30pm, Lun-Vie 6:30-7:30pm, Sáb (Femenil 9:30-10:30am, Varonil 11:00-1:00pm). Cancha Polivalente EIAO",
       entrenador: "Lic. Brayan López",
-      img: "/voleibol.png",
-      verificado: true
+      img: "src/assets/img/volei.jpg",
     }
   ])
 

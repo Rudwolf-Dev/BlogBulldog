@@ -1,24 +1,10 @@
 <template>
-  <footer class="footer-bulldog text-center py-3 mt-5">
-    <div class="footer-divider"></div>
-    <p class="mb-0 fw-semibold">2025 - eeeeeeeeeeee créditos</p>
-  </footer>
+  <p class="mb-0 fw-semibold">2025 - eeeeeeeeeeee créditos</p>
 </template>
 
 <style scoped>
-/* Este componente usa las variables globales definidas para ambos temas. */
-.footer-bulldog {
-  /* Fondo principal: Usa el color de fondo general o el color de tarjeta para más contraste */
-  background-color: var(--bg-dark);
-  /* Color del texto: Usa el color de texto general del tema */
-  color: var(--color-text);
-
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-}
-
 .footer-divider {
-  height: 10px;
+  height: 15px;
   background: linear-gradient(
     to bottom,
     /* Franja 1: Acento principal (Rojo en claro, Amarillo en oscuro) */
@@ -33,6 +19,5 @@
     #fe7200 66%,
     #fe7200 100%
   );
-  margin-bottom: 10px;
 }
 </style>

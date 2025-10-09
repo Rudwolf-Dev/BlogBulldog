@@ -29,7 +29,6 @@
           <div class="card-body">
             <div class="d-flex align-items-center justify-content-between mb-2">
               <h5 class="card-title fw-bold">{{ club.nombre }}</h5>
-              <span v-if="club.verificado" class="badge bg-success">✔ Verificado</span>
             </div>
 
             <p class="text-muted small mb-1"><strong>Horario:</strong> {{ club.desc || 'Por confirmar' }}</p>
@@ -70,12 +69,12 @@ import { ref, computed } from 'vue'
 const query = ref('')
 
 const clubs = ref([
-  { nombre: "Banda de Guerra", desc: "Jueves 5:10-6:50pm, Sábado 12:50-1:30pm. Cancha Polivalente", responsable: "Ing. Joel Cuellar", alumnos: null, img: "/banda-de-guerra.png", verificado: false },
+  { nombre: "Banda de Guerra", desc: "Jueves 5:10-6:50pm, Sábado 12:50-1:30pm. Cancha Polivalente", responsable: "Ing. Joel Cuellar", alumnos: null, img: "src/assets/img/banda de guerra.jpg", verificado: false },
   { nombre: "Club de Ajedrez", desc: "Jueves 2:00-3:00pm. Biblioteca", responsable: "Lic. Roberto Rincón", alumnos: 17, img: "/ajedrez.png", verificado: true },
   { nombre: "Club de Artes", desc: "Sábado 9:00-11:00am. Biblioteca", responsable: "Mtro. Juan Martínez", alumnos: 20, img: "/artes.png", verificado: true },
-  { nombre: "Danza Folklórica", desc: "Lunes 12:00-1:00pm. Cancha Polivalente", responsable: "Mtro. Brayan López", alumnos: 19, img: "/danza.png", verificado: true },
+  { nombre: "Danza Folklórica", desc: "Lunes 12:00-1:00pm. Cancha Polivalente", responsable: "Mtro. Brayan López", alumnos: 19, img: "src/assets/img/danza.jpg", verificado: true },
   { nombre: "Club de Música", desc: "Jueves 1:00-2:30pm. Laboratorio de Biología", responsable: "Ing. Jaqueline Garza", alumnos: 10, img: "/musica.png", verificado: true },
-  { nombre: "Periodismo", desc: "Sábado 10:00-11:30am. Aula 410", responsable: "Lic. Román Garza", alumnos: null, img: "/periodismo.png", verificado: false },
+  { nombre: "Periodismo", desc: "Sábado 10:00-11:30am. Aula 410", responsable: "Lic. Román Garza", alumnos: null, img: "src/assets/img/periodismo.jpg", verificado: false },
   { nombre: "Club de Lectura", desc: "Miércoles 1:00-1:50pm. Biblioteca", responsable: "Lic. Lesly González", alumnos: null, img: "/lectura.png", verificado: false },
   { nombre: "Club de Videojuegos", desc: "Sábado 10:00-12:00pm. Sala de Programación Web", responsable: "Mtro. Juan Martínez", alumnos: null, img: "/videojuegos.png", verificado: false },
   { nombre: "Lenguaje de Señas", desc: "Sábado 10:00-11:00am. Aula 402", responsable: "Lic. Cecilia García", alumnos: 13, img: "/lenguaje-senas.png", verificado: true },
