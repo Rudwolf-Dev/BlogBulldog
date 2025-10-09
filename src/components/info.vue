@@ -1,6 +1,5 @@
 <template>
-  <section class="py-5">
-    <div class="container"
+  <section class="container py-5">
       v-for="(Seccion, index) in Secciones"
       :key="index">
       <h2 class="mb-4">{{ Seccion.titulo }}</h2>
@@ -8,7 +7,6 @@
       :key="i">
       {{ parrafo }}
     </p>
-    </div>
   </section>
 </template>
 

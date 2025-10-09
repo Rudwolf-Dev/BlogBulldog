@@ -69,10 +69,26 @@ import { ref, computed } from 'vue'
 const query = ref('')
 
 const clubs = ref([
-  { nombre: "Banda de Guerra", desc: "Jueves 5:10-6:50pm, Sábado 12:50-1:30pm. Cancha Polivalente", responsable: "Ing. Joel Cuellar", alumnos: null, img: "banda de guerra.jpg", verificado: false },
-  { nombre: "Club de Ajedrez", desc: "Jueves 2:00-3:00pm. Biblioteca", responsable: "Lic. Roberto Rincón", alumnos: 17, img: "/ajedrez.png", verificado: true },
-  { nombre: "Club de Artes", desc: "Sábado 9:00-11:00am. Biblioteca", responsable: "Mtro. Juan Martínez", alumnos: 20, img: "/artes.png", verificado: true },
-  { nombre: "Danza Folklórica", desc: "Lunes 12:00-1:00pm. Cancha Polivalente", responsable: "Mtro. Brayan López", alumnos: 19, img: "img/danza.jpg", verificado: true },
+  { nombre: "Banda de Guerra",
+    desc: "Jueves 5:10-6:50pm, Sábado 12:50-1:30pm. Cancha Polivalente",
+    responsable: "Ing. Joel Cuellar",
+    alumnos: null,
+    img: "banda de guerra.jpg"
+  },
+  { nombre: "Club de Ajedrez",
+    desc: "Jueves 2:00-3:00pm. Biblioteca",
+    responsable: "Lic. Roberto Rincón",
+    alumnos: 17,
+    img: "/ajedrez.png",
+    verificado: true
+  },
+  { nombre: "Club de Artes",
+    desc: "Sábado 9:00-11:00am. Biblioteca",
+    responsable: "Mtro. Juan Martínez",
+    alumnos: 20, img: "/artes.png",
+    verificado: true },
+  { nombre: "Danza Folklórica",
+    desc: "Lunes 12:00-1:00pm. Cancha Polivalente", responsable: "Mtro. Brayan López", alumnos: 19, img: "img/danza.jpg", verificado: true },
   { nombre: "Club de Música", desc: "Jueves 1:00-2:30pm. Laboratorio de Biología", responsable: "Ing. Jaqueline Garza", alumnos: 10, img: "/musica.png", verificado: true },
   { nombre: "Periodismo", desc: "Sábado 10:00-11:30am. Aula 410", responsable: "Lic. Román Garza", alumnos: null, img: "periodismo.jpg", verificado: false },
   { nombre: "Club de Lectura", desc: "Miércoles 1:00-1:50pm. Biblioteca", responsable: "Lic. Lesly González", alumnos: null, img: "/lectura.png", verificado: false },
