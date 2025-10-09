@@ -51,7 +51,7 @@
       nombre: "Tochito Bandera",
       desc: "Varonil y Femenil. Mar, Mié, Jue y Sáb",
       entrenador: "Lic. Román Garza",
-      img: "src/assets/img/tochito.jpg",
+      img: "./src/assets/img/tochito.jpg",
     },
     {
       nombre: "Softbol y Béisbol",
@@ -63,25 +63,25 @@
       nombre: "Handball",
       desc: "Varonil. Lunes y Viernes 6:00-7:30pm. Cancha Polivalente EIAO",
       entrenador: "Lic. Roberto Rincón",
-      img: "src/assets/img/handball.jpg",
+      img: "./src/assets/img/handball.jpg",
     },
     {
       nombre: "Fútbol Asociación",
       desc: "Varonil y Femenil. Mar-Jue 6:00-7:30pm. Campos EIAO Unidad Linares",
       entrenador: "Lic. Roberto Rincón",
-      img: "src/assets/img/Fut.jpg",
+      img: "./src/assets/img/Fut.jpg",
     },
     {
       nombre: "Básquetbol",
       desc: "Varonil y Femenil. Mar, Jue y Sáb",
       entrenador: "Emiliano Rodríguez",
-      img: "src/assets/img/basquet.jpg",
+      img: "./src/assets/img/basquet.jpg",
     },
     {
       nombre: "Voleibol de Sala",
       desc: "Varonil y Femenil. Mar-Jue 1:00-2:30pm, Lun-Vie 6:30-7:30pm, Sáb (Femenil 9:30-10:30am, Varonil 11:00-1:00pm). Cancha Polivalente EIAO",
       entrenador: "Lic. Brayan López",
-      img: "src/assets/img/volei.jpg",
+      img: "./src/assets/img/volei.jpg",
     }
   ])
 
