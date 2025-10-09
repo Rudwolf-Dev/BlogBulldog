@@ -16,8 +16,8 @@
     <!-- Bloque de bienvenida -->
     <section class="welcome-section text-center">
       <div class="">
-        <div class="speech-wrapper d-flex align-items-center">
-          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="220">
+        <div class="speech-wrapper d-flex align-items-center mx-0">
+          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="300">
           <div class="speech-bubble-main me-3">
             <p class="mb-0 fw-semibold">¡Bienvenido!</p>
           </div>
@@ -165,6 +165,8 @@ const deportes = ref([
   background-color: var(--color-accent-secondary);
   /* Texto: Color de texto principal (Negro en claro, Blanco en oscuro) */
   color: var(--color-text);
+  border-top: 12px solid var(--color-blue);
+  border-bottom: 6px solid var(--color-orange);
 }
 
 /* ---------- TARJETAS DE CLUBES / DEPORTES ---------- */
@@ -176,6 +178,7 @@ const deportes = ref([
   text-align: center;
   border: none;
   transition: transform 0.2s ease;
+  border-bottom: 6px solid var(--color-orange);
 }
 
 .actividad-card:hover {

@@ -1,6 +1,6 @@
 <template>
   <section class="container py-5">
-    <h2 class="mb-4">Equipos Representativos</h2>
+      <h2 class="mb-4">Equipos Representativos</h2>
 
     <!-- Buscador -->
     <div class="input-group mb-4">
@@ -145,3 +145,4 @@ section {
   background-color: #28a745 !important;
 }
 </style>
+

@@ -1,12 +1,13 @@
 <template>
-  <section class="container py-5">
-      v-for="(Seccion, index) in Secciones"
+  <section class="containe py-5">
+    <div v-for="(Seccion, index) in Secciones"
       :key="index">
       <h2 class="mb-4">{{ Seccion.titulo }}</h2>
       <p v-for="(parrafo, i) in Seccion.texto"
       :key="i">
       {{ parrafo }}
     </p>
+    </div>
   </section>
 </template>
 
