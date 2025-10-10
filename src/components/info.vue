@@ -14,7 +14,7 @@
       :key="i">
       {{ parrafo }}
       </p>
-      <img src="seccion.img" alt="">
+      <img :src="Seccion.img" alt="">
     </div>
     </div>
   </section>
