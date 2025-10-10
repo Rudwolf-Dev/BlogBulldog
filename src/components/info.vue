@@ -38,7 +38,7 @@
     texto: [
       "Festejamos este aniversario rindiendo un homenaje a la trayectoria de la Preparatoria Álvaro Obregón, mostrando los clubs y deportes actuales. El 4 de Octubre celebramos que la EIAO ha sido y es un pilar significante en la educación."
       ],
-      img:["Aniversario95-1.jpg","Aniversario95-2.jpg","Aniversario95-2.jpg"]
+      img:["Aniversario95-1.jpg","Aniversario95-2.jpg","Aniversario95-3.jpg","Aniversario95-4.jpg"]
     },
     {
     titulo: "Dudas",
