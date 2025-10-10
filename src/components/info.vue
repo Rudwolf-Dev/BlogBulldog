@@ -30,13 +30,14 @@
       "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
       "Cada uno encargado de una parte esencial de la página, el código, diseño y contenido."
       ],
-    img:""
+
     },
     {
-    titulo: "Aniversario 95°",
+    titulo: "Aniversario95-1",
     texto: [
       "Festejamos este aniversario rindiendo un homenaje a la trayectoria de la Preparatoria Álvaro Obregón, mostrando los clubs y deportes actuales. El 4 de Octubre celebramos que la EIAO ha sido y es un pilar significante en la educación."
-      ]
+      ],
+      img:"Aniversario95.jpg"
     },
     {
     titulo: "Dudas",
