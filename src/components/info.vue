@@ -15,7 +15,7 @@
       :key="i">
       {{ parrafo }}
       </p>
-      <img width="280px" class="m-md-1"  v-for="(imagenes, i) in Seccion.img"
+      <img width="280px" class="m-md-1" v-for="(imagenes, i) in Seccion.img"
       :key="i" :src="imagenes">
     </div>
     <br />
@@ -34,7 +34,7 @@
       ],
     },
     {
-    titulo: "Aniversario95°",
+    titulo: "Aniversario 95°",
     texto: [
       "Festejamos este aniversario rindiendo un homenaje a la trayectoria de la Preparatoria Álvaro Obregón, mostrando los clubs y deportes actuales. El 4 de Octubre celebramos que la EIAO ha sido y es un pilar significante en la educación."
       ],
@@ -80,6 +80,7 @@ section {
   transition: transform 0.2s ease;
   border-bottom: 6px solid var(--color-orange);
   margin-bottom: 25px;
+  padding-top: 20px;
 }
 
 .card {
