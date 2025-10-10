@@ -48,7 +48,12 @@ const videojuegos = ref([
     desc: "Completa todas las especialidades de la EIAO",
     responsable: "",
     img: "JuegoEIAO95.png",
-    url: "https://scratch.mit.edu/projects/1224384126/"
+    url: "https://scratch.mit.edu/projects/1224384126/",
+    screenshot: [
+      "JuegoEIAO95-1.png",
+      "JuegoEIAO95-2.png",
+      "JuegoEIAO95-3.png"
+    ]
   }
 ])
 </script>
