@@ -6,7 +6,7 @@
     <header class="header-bulldog text-white hammersmith-one-regular py-4 row">
       <div class="container d-flex justify-content-between align-items-center">
         <img src="./../assets/img/UANL-logo.png" alt="UANL"/>
-        <div class="text-center col-6">
+        <div class="text-center col-3">
           <h1 class="text-black fw-bold title-bulldog">BLOG BULLDOG</h1>
           <h4 class="text-dark fw-semibold mb-0">EIAO Linares</h4>
         </div>
@@ -119,7 +119,8 @@ const deportes = ref([
 }
 
 .header-bulldog img {
-  max-height: 100px;
+  max-width: 75px;
+  width: 100%;
   margin-left: 40px;
   margin-right: 40px;
 }
