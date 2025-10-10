@@ -9,7 +9,7 @@
         v-for="Juegos in videojuegos"
         :key="Juegos.nombre"
         :id="Juegos.id"
-        class="col-md-4 col-sm-6"
+        class="col-md-6 mb-4"
       >
         <div class="card actividad-card h-100 border-0 shadow-hover">
           <div class="img-wrapper">
@@ -34,27 +34,6 @@
           </div>
         </div>
       </div>
-      <div  class="carousel slide col-md-4 col-sm-6">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-        </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
     </div>
   </section>
 </template>
@@ -68,7 +47,7 @@ const videojuegos = ref([
     id: "Juegos",
     desc: "Completa todas las especialidades de la EIAO",
     responsable: "",
-    img: "JuegoEIAO95.PNG",
+    img: "JuegoEIAO95.png",
     url: "https://scratch.mit.edu/projects/1224384126/"
   }
 ])
