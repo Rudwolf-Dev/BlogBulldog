@@ -13,8 +13,7 @@
       :key="i">
       {{ parrafo }}
       </p>
-      <br />
-      <br />
+      <img src="seccion.img" alt="">
     </div>
   </section>
 </template>
@@ -28,7 +27,8 @@
     texto: [
       "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
       "Cada uno encargado de una parte esencial de la página, el código, diseño y contenido."
-      ]
+      ],
+    img:""
     },
     {
     titulo: "Aniversario 95°",
