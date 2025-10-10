@@ -44,7 +44,7 @@
           <a :href="taller.url" class=" text-decoration-none">
             <div class="actividad-card">
             <div class="circle">
-              <span>{{ taller.nombre[0] }}</span>
+              <span><i :class="taller.icon"></i></span>
             </div>
             <p class="actividad-nombre">{{ taller.nombre }}</p>
           </div>
@@ -61,7 +61,7 @@
           <a :href="deporte.url" class=" text-decoration-none">
             <div class="actividad-card">
             <div class="circle">
-              <span>{{ deporte.nombre[0] }}</span>
+              <span><i :class="deporte.icon"></i></span>
             </div>
             <p class="actividad-nombre">{{ deporte.nombre }}</p>
           </div>
@@ -76,17 +76,17 @@
 import { ref } from 'vue'
 
 const talleres = ref([
-  { nombre: "Banda de Guerra", url: "/actExt#Banda"},
-  { nombre: "Club de Ajedrez", url: "/actExt#Ajedrez" },
-  { nombre: "Club de Artes", url: "/actExt#Artes" },
-  { nombre: "Danza Folklórica", url: "/actExt#Danza" },
-  { nombre: "Club de Música", url: "/actExt#Música" },
-  { nombre: "Periodismo", url: "/actExt#Foto" },
-  { nombre: "Club de Lectura", url: "/actExt#Lect" },
-  { nombre: "Club de Videojuegos", url: "/actExt#Juegos" },
-  { nombre: "Lenguaje de Señas", url: "/actExt#Señas" },
-  { nombre: "EcoBulldog", url: "/actExt#Eco" },
-  { nombre: "Taller de Robótica", url: "/actExt#Robot" }
+  { nombre: "Banda de Guerra", url: "/actExt#Banda", icon:"bi bi-palette"},
+  { nombre: "Club de Ajedrez", url: "/actExt#Ajedrez", icon:"bi bi-palette"},
+  { nombre: "Club de Artes", url: "/actExt#Artes", icon:"bi bi-palette" },
+  { nombre: "Danza Folklórica", url: "/actExt#Danza", icon:"bi bi-palette" },
+  { nombre: "Club de Música", url: "/actExt#Música", icon:"bi bi-palette" },
+  { nombre: "Periodismo", url: "/actExt#Foto", icon:"bi bi-palette" },
+  { nombre: "Club de Lectura", url: "/actExt#Lect", icon:"bi bi-palette" },
+  { nombre: "Club de Videojuegos", url: "/actExt#Juegos", icon:"bi bi-palette" },
+  { nombre: "Lenguaje de Señas", url: "/actExt#Señas", icon:"bi bi-palette" },
+  { nombre: "EcoBulldog", url: "/actExt#Eco", icon:"bi bi-palette" },
+  { nombre: "Taller de Robótica", url: "/actExt#Robot", icon:"bi bi-palette" }
 ])
 
 const deportes = ref([
