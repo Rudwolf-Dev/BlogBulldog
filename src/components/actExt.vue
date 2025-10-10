@@ -69,6 +69,12 @@ import { ref, computed } from 'vue'
 const query = ref('')
 
 const clubs = ref([
+  { nombre: "Club de Videojuegos",
+    desc: "Sábado 10:00-12:00pm. Sala de Programación Web",
+    responsable: "Mtro. Juan Martínez",
+    alumnos: null,
+    img: "VideoJuegos.jpeg"
+  },
   { nombre: "Banda de Guerra",
     desc: "Jueves 5:10-6:50pm, Sábado 12:50-1:30pm. Cancha Polivalente",
     responsable: "Ing. Joel Cuellar",
@@ -79,23 +85,56 @@ const clubs = ref([
     desc: "Jueves 2:00-3:00pm. Biblioteca",
     responsable: "Lic. Roberto Rincón",
     alumnos: 17,
-    img: "/ajedrez.png",
-    verificado: true
+    img: "ajedrez.jpeg",
   },
   { nombre: "Club de Artes",
     desc: "Sábado 9:00-11:00am. Biblioteca",
     responsable: "Mtro. Juan Martínez",
-    alumnos: 20, img: "/artes.png",
-    verificado: true },
+    alumnos: 20,
+    img: "Artes.jpeg"
+  },
   { nombre: "Danza Folklórica",
-    desc: "Lunes 12:00-1:00pm. Cancha Polivalente", responsable: "Mtro. Brayan López", alumnos: 19, img: "img/danza.jpg", verificado: true },
-  { nombre: "Club de Música", desc: "Jueves 1:00-2:30pm. Laboratorio de Biología", responsable: "Ing. Jaqueline Garza", alumnos: 10, img: "/musica.png", verificado: true },
-  { nombre: "Periodismo", desc: "Sábado 10:00-11:30am. Aula 410", responsable: "Lic. Román Garza", alumnos: null, img: "periodismo.jpg", verificado: false },
-  { nombre: "Club de Lectura", desc: "Miércoles 1:00-1:50pm. Biblioteca", responsable: "Lic. Lesly González", alumnos: null, img: "/lectura.png", verificado: false },
-  { nombre: "Club de Videojuegos", desc: "Sábado 10:00-12:00pm. Sala de Programación Web", responsable: "Mtro. Juan Martínez", alumnos: null, img: "/videojuegos.png", verificado: false },
-  { nombre: "Lenguaje de Señas", desc: "Sábado 10:00-11:00am. Aula 402", responsable: "Lic. Cecilia García", alumnos: 13, img: "/lenguaje-senas.png", verificado: true },
-  { nombre: "EcoBulldog", desc: "Martes 1:00-2:00pm. Laboratorio de Biología", responsable: "Ing. Lucero Hinojosa", alumnos: null, img: "/eco-bulldog.png", verificado: false },
-  { nombre: "Taller de Robótica", desc: null, responsable: null, alumnos: 18, img: "/robotica.png", verificado: false }
+    desc: "Lunes 12:00-1:00pm. Cancha Polivalente",
+    responsable: "Mtro. Brayan López",
+    alumnos: 19,
+    img: "danza.jpg",
+  },
+  { nombre: "Club de Música",
+    desc: "Jueves 1:00-2:30pm. Laboratorio de Biología",
+    responsable: "Ing. Jaqueline Garza",
+    alumnos: 10,
+    img: "musica.png",
+  },
+  { nombre: "Periodismo",
+    desc: "Sábado 10:00-11:30am. Aula 410",
+    responsable: "Lic. Román Garza",
+    alumnos: null,
+    img: "periodismo.jpg"
+  },
+  { nombre: "Club de Lectura",
+    desc: "Miércoles 1:00-1:50pm. Biblioteca",
+    responsable: "Lic. Lesly González",
+    alumnos: null,
+    img: "lectura.png"
+  },
+  { nombre: "Lenguaje de Señas",
+    desc: "Sábado 10:00-11:00am. Aula 402",
+    responsable: "Lic. Cecilia García",
+    alumnos: 13,
+    img: "señas.jpeg"
+  },
+  { nombre: "EcoBulldog",
+    desc: "Martes 1:00-2:00pm. Laboratorio de Biología",
+    responsable: "Ing. Lucero Hinojosa",
+    alumnos: null,
+    img: "eco.jpeg"
+  },
+  { nombre: "Taller de Robótica",
+    desc: null,
+    responsable: null,
+    alumnos: 18,
+    img: "robotica.jpg"
+  }
 ])
 
 const filteredClubs = computed(() => {

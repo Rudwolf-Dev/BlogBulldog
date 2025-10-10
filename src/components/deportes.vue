@@ -57,7 +57,7 @@
       nombre: "Softbol y Béisbol",
       desc: "Varonil y Femenil. Mar-Jue 5:30-7:00pm. Polideportivo Tigers UANL Linares",
       entrenador: "Erick Martínez",
-      img: "/softbol.png",
+      img: "softball.jpeg",
     },
     {
       nombre: "Handball",
