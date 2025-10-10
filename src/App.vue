@@ -103,6 +103,6 @@ section {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   border-top: 12px solid var(--color-accent-secondary);
-  
+
 }
 </style>

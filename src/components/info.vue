@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <section class="container py-5">
     <div v-for="(Seccion, index) in Secciones"
@@ -6,7 +7,9 @@
       <p v-for="(parrafo, i) in Seccion.texto"
       :key="i">
       {{ parrafo }}
-      </p><br></br><br>
+      </p>
+      <br />
+      <br />
     </div>
   </section>
 </template>
@@ -19,20 +22,19 @@
     titulo: "Sobre Nosotros",
     texto: [
       "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
-      "Cada uno aportó en diseño, programación y contenido para dar vida al Blog Bulldog."
+      "Cada uno encargado de una parte esencial de la página, el código, diseño y contenido."
       ]
     },
     {
     titulo: "Aniversario 95°",
     texto: [
-      "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
-      "Cada uno aportó en diseño, programación y contenido para dar vida al Blog Bulldog."
+      "Festejamos este aniversario rindiendo un homenaje a la trayectoria de la Preparatoria Álvaro Obregón, mostrando los clubs y deportes actuales. El 4 de Octubre celebramos que la EIAO ha sido y es un pilar significante en la educación."
       ]
     },
     {
     titulo: "Dudas",
     texto: [
-      "Si tienes dudas sobre los clubs culturales puedes dirigirte con la Mtra. Jaqueline Garza o en el caso de los deportes puedes preguntar en la oficina de Coordinación Deportiva."
+      "Si tienes alguna duda sobre los clubs culturales puedes dirigirte con la Mtra. Jaqueline Garza en prefectura o en el caso de ser acerca de los deportes puedes preguntar en la oficina de Coordinación Deportiva."
       ]
     }
 ])

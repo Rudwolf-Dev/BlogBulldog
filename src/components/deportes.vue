@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <section class="container py-5">
       <h2 class="mb-4">Equipos Representativos</h2>
@@ -11,6 +12,7 @@
     <div class="row">
       <div v-for="equipo in filteredEquipos"
            :key="equipo.nombre"
+           :id="equipo.id"
            class="col-md-6 mb-4">
         <div class="card h-100 border-primary shadow">
           <img :src="equipo.img" class="card-img-top" :alt="equipo.nombre">
@@ -22,11 +24,8 @@
             <p><strong>Entrenador:</strong> {{ equipo.entrenador || 'Por confirmar' }}</p>
 
             <div class="mt-3">
-              <button class="btn btn-outline-primary btn-sm me-2" @click="verFotos(equipo.nombre)">
+              <button class="btn btn-outline-primary btn-sm me-2 w-100" @click="verFotos(equipo.nombre)">
                 Ver fotos del área
-              </button>
-              <button class="btn btn-primary btn-sm" @click="verEntrenamientos(equipo.nombre)">
-                Entrenamientos
               </button>
             </div>
           </div>
@@ -38,47 +37,109 @@
         <div class="alert alert-warning">No se encontraron equipos que coincidan con “{{ query }}”.</div>
       </div>
     </div>
+    <!-- Modal con Carrusel -->
+<div class="modal fade" id="modalFotos" tabindex="-1" aria-labelledby="modalFotosLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFotosLabel">Fotos del Club</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselFotos" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div
+              v-for="(img, index) in imagenesActuales"
+              :key="index"
+              :class="['carousel-item', { active: index === 0 }]"
+            >
+              <img :src="img" class="d-block w-100 rounded" alt="Foto del club">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselFotos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   </section>
 </template>
 
 <script setup scoped>
   import { ref, computed } from 'vue'
+  import * as bootstrap from 'bootstrap'
+
+const imagenesDeportes = {
+  "Tochito Bandera": ["tochito.jpg"],
+  "Softbol y Béisbol": ["softball.jpeg", "beisbol.jpg"],
+  "Handball": ["handball.jpg"],
+  "Fútbol Asociación": ["Fut.jpg", "fut2.jpg"],
+  "Básquetbol": ["basquet.jpg"],
+  "Voleibol de Sala": ["voleibol.jpg"]
+}
+
+
+const imagenesActuales = ref([])
+
+const verFotos = (nombre) => {
+  imagenesActuales.value = imagenesDeportes[nombre] || []
+  if (imagenesActuales.value.length > 0) {
+    const modal = new bootstrap.Modal(document.getElementById('modalFotos'))
+    modal.show()
+  } else {
+    alert('No hay imágenes disponibles para este equipo.')
+  }
+}
 
   const query = ref('')
 
   const equipos = ref([
     {
       nombre: "Tochito Bandera",
+      id: "Toch",
       desc: "Varonil y Femenil. Mar, Mié, Jue y Sáb",
       entrenador: "Lic. Román Garza",
       img: "tochito.jpg",
     },
     {
       nombre: "Softbol y Béisbol",
+      id: "Soft",
       desc: "Varonil y Femenil. Mar-Jue 5:30-7:00pm. Polideportivo Tigers UANL Linares",
       entrenador: "Erick Martínez",
       img: "softball.jpeg",
     },
     {
       nombre: "Handball",
+      id: "Hand",
       desc: "Varonil. Lunes y Viernes 6:00-7:30pm. Cancha Polivalente EIAO",
       entrenador: "Lic. Roberto Rincón",
       img: "handball.jpg",
     },
     {
       nombre: "Fútbol Asociación",
+      id: "Fut",
       desc: "Varonil y Femenil. Mar-Jue 6:00-7:30pm. Campos EIAO Unidad Linares",
       entrenador: "Lic. Roberto Rincón",
       img: "Fut.jpg",
     },
     {
       nombre: "Básquetbol",
+      id: "Basq",
       desc: "Varonil y Femenil. Mar, Jue y Sáb",
       entrenador: "Emiliano Rodríguez",
       img: "basquet.jpg",
     },
     {
       nombre: "Voleibol de Sala",
+      id: "Vol",
       desc: "Varonil y Femenil. Mar-Jue 1:00-2:30pm, Lun-Vie 6:30-7:30pm, Sáb (Femenil 9:30-10:30am, Varonil 11:00-1:00pm). Cancha Polivalente EIAO",
       entrenador: "Lic. Brayan López",
       img: "volei.jpg",
@@ -95,15 +156,6 @@
       (e.desc?.toLowerCase().includes(q))
     )
   })
-
-  // Acciones de botones (placeholders)
-  const verFotos = (nombre) => {
-    alert(`Abrir fotos del área: ${nombre}`)
-  }
-
-  const verEntrenamientos = (nombre) => {
-    alert(`Ver entrenamientos de: ${nombre}`)
-  }
 </script>
 
 <style scoped>

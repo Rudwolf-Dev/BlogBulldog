@@ -1,26 +1,32 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="home-bulldog">
 
     <!-- Encabezado superior -->
-    <header class="header-bulldog text-white py-3">
+    <header class="header-bulldog text-white py-3 row">
       <div class="container d-flex justify-content-between align-items-center">
-        <img src="./../assets/img/UANL-logo.png" alt="UANL" height="100" />
-        <div class="text-center">
+        <img src="./../assets/img/UANL-logo.png" alt="UANL"/>
+        <div class="text-center col-6">
           <h1 class="text-black fw-bold title-bulldog">BLOG BULLDOG</h1>
           <h4 class="text-dark fw-semibold mb-0">EIAO Linares</h4>
         </div>
-        <img src="./../assets/img/EIAO-logo.png" alt="EIAO" height="100" />
+        <img src="./../assets/img/EIAO-logo.png" alt="EIAO"/>
       </div>
     </header>
 
     <!-- Bloque de bienvenida -->
     <section class="welcome-section text-center">
       <div>
-        <div class="speech-wrapper d-flex align-items-center mx-0">
-          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="350">
-          <div class="speech-bubble-main me-3">
-            <p class="mb-0 fw-semibold">¡Bienvenido!</p>
+        <div class="speech-wrapper mx-0">
+          <img src="./../assets/img/Bulldog.png" class="bulldog-img col-2" alt="Bulldog" width="350px">
+          <div class="speech-bubble-main me-3 w-75">
+            <p class="fw-semibold">¡Bienvenidos a mi blog!</p>
+            <p class="mb-0">
+              En este puedes aprender sobre las distintas actividades que se realizan fuera de clases en nuestra unidad EIAO linares. Aquí puedes encontrar información y fotos de todos los clubs y deportes a los que te puedes unir iniciando el semestre, algunos de estos fueron implementados recientemente y han apoyado al crecimiento de las generaciones.
+              Hecha un vistazo a nuestras actividades extracurriculares, equipos representativos así como más información sobre el sitio web.
+            </p>
           </div>
+
         </div>
       </div>
     </section>
@@ -35,12 +41,14 @@
       <h3 class="fw-bold text-uppercase mb-4">Clubes y Talleres</h3>
       <div class="row g-4 justify-content-center">
         <div v-for="taller in talleres" :key="taller.nombre" class="col-lg-4 col-md-6">
-          <div class="actividad-card">
+          <a :href="taller.url" class=" text-decoration-none">
+            <div class="actividad-card">
             <div class="circle">
               <span>{{ taller.nombre[0] }}</span>
             </div>
             <p class="actividad-nombre">{{ taller.nombre }}</p>
           </div>
+          </a>
         </div>
       </div>
     </section>
@@ -50,16 +58,17 @@
       <h3 class="fw-bold text-uppercase mb-4">Deportes</h3>
       <div class="row g-4 justify-content-center">
         <div v-for="deporte in deportes" :key="deporte.nombre" class="col-lg-4 col-md-6">
-          <div class="actividad-card">
+          <a :href="deporte.url" class=" text-decoration-none">
+            <div class="actividad-card">
             <div class="circle">
               <span>{{ deporte.nombre[0] }}</span>
             </div>
             <p class="actividad-nombre">{{ deporte.nombre }}</p>
           </div>
+        </a>
         </div>
       </div>
     </section>
-
   </div>
 </template>
 
@@ -67,34 +76,30 @@
 import { ref } from 'vue'
 
 const talleres = ref([
-  { nombre: "Banda de Guerra" },
-  { nombre: "Club de Ajedrez" },
-  { nombre: "Club de Artes" },
-  { nombre: "Danza Folklórica" },
-  { nombre: "Club de Música" },
-  { nombre: "Periodismo" },
-  { nombre: "Club de Lectura" },
-  { nombre: "Club de Videojuegos" },
-  { nombre: "Lenguaje de Señas" },
-  { nombre: "EcoBulldog" },
-  { nombre: "Taller de Robótica" }
+  { nombre: "Banda de Guerra", url: "/actExt#Banda"},
+  { nombre: "Club de Ajedrez", url: "/actExt#Ajedrez" },
+  { nombre: "Club de Artes", url: "/actExt#Artes" },
+  { nombre: "Danza Folklórica", url: "/actExt#Danza" },
+  { nombre: "Club de Música", url: "/actExt#Música" },
+  { nombre: "Periodismo", url: "/actExt#Foto" },
+  { nombre: "Club de Lectura", url: "/actExt#Lect" },
+  { nombre: "Club de Videojuegos", url: "/actExt#Juegos" },
+  { nombre: "Lenguaje de Señas", url: "/actExt#Señas" },
+  { nombre: "EcoBulldog", url: "/actExt#Eco" },
+  { nombre: "Taller de Robótica", url: "/actExt#Robot" }
 ])
 
 const deportes = ref([
-  { nombre: "Softbol y Béisbol" },
-  { nombre: "Handball" },
-  { nombre: "Fútbol Asociación" },
-  { nombre: "Básquetbol" },
-  { nombre: "Voleibol de Sala" },
-  { nombre: "Tochito Bandera" }
+  { nombre: "Softbol y Béisbol", url: "/equiposRep#Soft" },
+  { nombre: "Handball", url: "/equiposRep#Hand" },
+  { nombre: "Fútbol Asociación", url: "/equiposRep#Fut" },
+  { nombre: "Básquetbol", url: "/equiposRep#Basq" },
+  { nombre: "Voleibol de Sala", url: "/equiposRep#Vol" },
+  { nombre: "Tochito Bandera", url: "/equiposRep#Toch" }
 ])
 </script>
 
 <style scoped>
-/*
- * NOTA: Este código utiliza las variables definidas en la configuración global de temas:
- * --color-bg, --color-text, --color-card, --color-accent, --color-accent-secondary, --color-blue
-*/
 
 .home-bulldog {
   /* Fondo principal: Usa el color de fondo general del tema. */
@@ -114,18 +119,11 @@ const deportes = ref([
 
 }
 
-.title-bulldog {
-  font-size: 2.8rem;
-  letter-spacing: 1px;
+.header-bulldog img {
+  max-height: 100px;
 }
 
 /* ---------- BURBUJA DE BIENVENIDA ---------- */
-.speech-wrapper img{
-  background: url('./../assets/img/bulldog-back');
-  border-radius: 5% 45% 0 0;
-  margin-right: 35px;
-}
-
 .speech-wrapper {
   margin-top: 20px;
   margin-left: 15px;
@@ -160,6 +158,44 @@ const deportes = ref([
   border-color: transparent transparent transparent #fe7200;
 }
 
+/* Escritorio: imagen a la izquierda, burbuja a la derecha */
+.speech-wrapper {
+  display: flex;               /* asegura flex aunque esté el d-flex de Bootstrap */
+  flex-direction: row;         /* fila en desktop */
+  align-items: center;
+  justify-content: flex-start; /* burbuja a la derecha del bulldog */
+  gap: 1rem;
+}
+
+/* Imagen responsiva */
+.bulldog-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Móviles: burbuja arriba, bulldog abajo; ambos alineados a la izquierda */
+@media (max-width: 768px) {
+  .speech-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .bulldog-img {
+    width: 55%;
+    max-width: 200px;
+  }
+  /* Punta de la burbuja apuntando hacia abajo hacia el bulldog */
+  .speech-bubble-main::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;                  /* coloca la punta abajo */
+    left: 25px;                     /* cerca del borde izquierdo (apuntando al perro) */
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fe7200 transparent transparent transparent;
+  }
+}
+
+
 /* ---------- SECCIÓN AMARILLA ---------- */
 .bg-yellow {
   /* Fondo: Acento secundario (Amarillo brillante en claro, Rojo oscuro en oscuro) */
@@ -175,7 +211,7 @@ const deportes = ref([
   /* Fondo: Blanco (Color de tarjeta) */
   background: var(--color-card);
   border-radius: 8px;
-  padding: 30px 0;
+  padding: 25px 0;
   text-align: center;
   border: none;
   transition: transform 0.2s ease;
@@ -209,6 +245,16 @@ const deportes = ref([
   font-size: 1rem;
 }
 .welcome-section {
-  background-image: url("./../assets/img/escuela.jpg");
+  background: linear-gradient(
+      to right,
+      rgb(0, 0, 0) 0%,   /* oscuro en el lado izquierdo */
+      rgba(81, 81, 81, 0.727) 30%,  /* transición */
+      rgba(0, 0, 0, 0) 60%     /* transparente hacia la derecha */
+    ),
+    url("./../assets/img/escuela.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 </style>

@@ -23,6 +23,9 @@
           <li class="nav-item">
             <router-link class="nav-link text-white fw-semibold px-3" to="/info">Información</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-white fw-semibold px-3" to="/videoJuegos">VideoJuegos</router-link>
+          </li>
         </ul>
 <!--
         <button
