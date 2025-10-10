@@ -3,7 +3,7 @@
   <div class="home-bulldog">
 
     <!-- Encabezado superior -->
-    <header class="header-bulldog text-white py-4 row">
+    <header class="header-bulldog text-white hammersmith-one-regular py-4 row">
       <div class="container d-flex justify-content-between align-items-center">
         <img src="./../assets/img/UANL-logo.png" alt="UANL"/>
         <div class="text-center col-6">
@@ -32,7 +32,7 @@
     </section>
 
     <!-- Actividades extracurriculares -->
-    <section class="bg-yellow py-5">
+    <section class="bg-yellow hammersmith-one-regular py-5">
       <h2 class="text-center fw-bold text-uppercase">Nuestras Actividades Extracurriculares</h2>
     </section>
 

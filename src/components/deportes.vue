@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <section class="section-title py-4 d-flex justify-content-between align-items-center">
+  <section class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center">
     <h2 class="container text-center fw-bold">Equipos Representativos</h2>
   </section>
 

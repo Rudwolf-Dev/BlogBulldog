@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <section class="section-title py-4 d-flex justify-content-between align-items-center">
+  <section class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center">
     <h2 class="container text-center fw-bold">Información</h2>
   </section>
 
@@ -9,6 +9,7 @@
     <div class="actividad-card">
     <div v-for="(Seccion, index) in Secciones"
       :key="index">
+      <br />
       <h2>{{ Seccion.titulo }}</h2>
       <p v-for="(parrafo, i) in Seccion.texto"
       :key="i">
@@ -17,6 +18,7 @@
       <img class="w-25 m-md-1"  v-for="(imagenes, i) in Seccion.img"
       :key="i" :src="imagenes">
     </div>
+    <br />
     </div>
   </section>
 </template>
@@ -28,10 +30,8 @@
     {
     titulo: "Sobre Nosotros",
     texto: [
-      "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
-      "Cada uno encargado de una parte esencial de la página, el código, diseño y contenido."
+      "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón. Cada uno de nosotros estuvo encargado de una parte esencial de la página: el código, diseño y contenido."
       ],
-
     },
     {
     titulo: "Aniversario95°",
@@ -68,7 +68,7 @@ section {
   border-bottom: 6px solid var(--color-orange);
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .actividad-card {
@@ -79,6 +79,7 @@ section {
   border: none;
   transition: transform 0.2s ease;
   border-bottom: 6px solid var(--color-orange);
+  margin-bottom: 25px;
 }
 
 .card {
