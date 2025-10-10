@@ -1,12 +1,12 @@
 <template>
-  <section class="containe py-5">
+  <section class="container py-5">
     <div v-for="(Seccion, index) in Secciones"
       :key="index">
       <h2 class="mb-4">{{ Seccion.titulo }}</h2>
       <p v-for="(parrafo, i) in Seccion.texto"
       :key="i">
       {{ parrafo }}
-    </p>
+      </p><br></br><br>
     </div>
   </section>
 </template>
@@ -27,6 +27,12 @@
     texto: [
       "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
       "Cada uno aportó en diseño, programación y contenido para dar vida al Blog Bulldog."
+      ]
+    },
+    {
+    titulo: "Dudas",
+    texto: [
+      "Si tienes dudas sobre los clubs culturales puedes dirigirte con la Mtra. Jaqueline Garza o en el caso de los deportes puedes preguntar en la oficina de Coordinación Deportiva."
       ]
     }
 ])

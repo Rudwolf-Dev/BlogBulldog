@@ -6,8 +6,8 @@
       <div class="container d-flex justify-content-between align-items-center">
         <img src="./../assets/img/UANL-logo.png" alt="UANL" height="100" />
         <div class="text-center">
-          <h1 class="fw-bold title-bulldog">BLOG BULLDOG</h1>
-          <h4 class="fw-semibold mb-0">EIAO Linares</h4>
+          <h1 class="text-black fw-bold title-bulldog">BLOG BULLDOG</h1>
+          <h4 class="text-dark fw-semibold mb-0">EIAO Linares</h4>
         </div>
         <img src="./../assets/img/EIAO-logo.png" alt="EIAO" height="100" />
       </div>
@@ -17,7 +17,7 @@
     <section class="welcome-section text-center">
       <div class="">
         <div class="speech-wrapper d-flex align-items-center mx-0">
-          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="300">
+          <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="350">
           <div class="speech-bubble-main me-3">
             <p class="mb-0 fw-semibold">¡Bienvenido!</p>
           </div>
@@ -105,12 +105,13 @@ const deportes = ref([
 /* ---------- ENCABEZADO ---------- */
 .header-bulldog {
   /* Fondo: Acento principal (Rojo oscuro en claro, Amarillo brillante en oscuro) */
-  background-color: var(--color-accent);
-  /* Borde inferior: Acento secundario (Amarillo brillante en claro, Rojo oscuro en oscuro) */
-  border-bottom: 6px solid var(--color-card);
-  /* Color del texto: Fijo en blanco o color de tarjeta para contraste sobre el fondo acentuado */
-  color: var(--color-card);
+  background-color: var(--color-card);
+  /* Borde superior: */
+  border-top: 20px solid var(--color-bg);
+  /* Borde inferior: */
+  border-bottom: 5px solid var(--color-orange);
   text-align: center;
+  
 }
 
 .title-bulldog {
@@ -122,7 +123,7 @@ const deportes = ref([
 .speech-wrapper img{
   background: url('./../assets/img/bulldog-back');
   border-radius: 5% 45% 0 0;
-  margin-right: 45px;
+  margin-right: 35px;
 }
 
 .speech-wrapper {
