@@ -107,9 +107,9 @@ const imagenesPorClub = {
     "periodismo 2.jpg",
     "periodismo 3.jpg"
   ],
-  "Club de Música": ["musica.png"],
+  "Club de Música": ["musica.jpg", "musica 2.jpg"],
   "Club de Artes": ["Artes.jpeg"],
-  "Club de Lectura": ["lectura.png"],
+  "Club de Lectura": ["lectura.jpg"],
   "Lenguaje de Señas": ["señas.jpeg"],
   "EcoBulldog": ["eco.jpeg"],
   "Taller de Robótica": ["robotica.jpg"]
@@ -172,7 +172,7 @@ const clubs = ref([
     desc: "Jueves 1:00-2:30pm. Laboratorio de Biología",
     responsable: "Ing. Jaqueline Garza",
     alumnos: 10,
-    img: "musica.png",
+    img: "musica.jpg",
   },
   { nombre: "Periodismo",
     id: "Foto",
@@ -186,7 +186,7 @@ const clubs = ref([
     desc: "Miércoles 1:00-1:50pm. Biblioteca",
     responsable: "Lic. Lesly González",
     alumnos: null,
-    img: "lectura.png"
+    img: "lectura.jpg"
   },
   { nombre: "Lenguaje de Señas",
     id: "Señas",

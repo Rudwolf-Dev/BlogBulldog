@@ -3,7 +3,7 @@
   <div class="home-bulldog">
 
     <!-- Encabezado superior -->
-    <header class="header-bulldog text-white py-3 row">
+    <header class="header-bulldog text-white py-4 row">
       <div class="container d-flex justify-content-between align-items-center">
         <img src="./../assets/img/UANL-logo.png" alt="UANL"/>
         <div class="text-center col-6">
@@ -18,7 +18,7 @@
     <section class="welcome-section text-center">
       <div>
         <div class="speech-wrapper mx-0">
-          <img src="./../assets/img/Bulldog.png" class="bulldog-img col-2" alt="Bulldog" width="350px">
+          <img src="./../assets/img/Bulldog.png" class="bulldog-img col-2" alt="Bulldog" width="360px">
           <div class="speech-bubble-main me-3 w-75">
             <p class="fw-semibold">¡Bienvenidos a mi blog!</p>
             <p class="mb-0">
@@ -120,6 +120,8 @@ const deportes = ref([
 
 .header-bulldog img {
   max-height: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 /* ---------- BURBUJA DE BIENVENIDA ---------- */
@@ -137,7 +139,7 @@ const deportes = ref([
   border-bottom: 3px solid #fe7200;
   border-right: 3px solid #fe7200;
   border-radius: 12px;
-  padding: 14px 20px;
+  padding: 35px;
   position: relative;
   font-size: 1.1rem;
   /* Texto: Negro (Color de texto principal) */
@@ -244,13 +246,7 @@ const deportes = ref([
   font-size: 1rem;
 }
 .welcome-section {
-  background: linear-gradient(
-      to right,
-      rgb(0, 0, 0) 0%,   /* oscuro en el lado izquierdo */
-      rgba(81, 81, 81, 0.727) 30%,  /* transición */
-      rgba(0, 0, 0, 0) 60%     /* transparente hacia la derecha */
-    ),
-    url("./../assets/img/escuela.jpg");
+  background-color: var(--color-bg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

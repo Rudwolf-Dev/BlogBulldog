@@ -21,10 +21,10 @@
             <router-link class="nav-link text-white fw-semibold px-3" to="/equiposRep">Equipos Representativos</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/info">Información</router-link>
+            <router-link class="nav-link text-white fw-semibold px-3" to="/videoJuegos">VideoJuegos</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/videoJuegos">VideoJuegos</router-link>
+            <router-link class="nav-link text-white fw-semibold px-3" to="/info">Información</router-link>
           </li>
         </ul>
 <!--

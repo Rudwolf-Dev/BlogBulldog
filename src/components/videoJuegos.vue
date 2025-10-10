@@ -1,7 +1,9 @@
 <template>
-  <section class="container py-5">
-    <h2 class="section-title text-center mb-5 fw-bold">Videojuegos</h2>
+  <section class="section-title py-4 d-flex justify-content-between align-items-center">
+    <h2 class="container text-center fw-bold">Videojuegos</h2>
+  </section>
 
+  <section class="container py-5">
     <div class="row g-4">
       <div
         v-for="Juegos in videojuegos"
@@ -19,8 +21,8 @@
               <h5 class="card-title fw-bold">{{ Juegos.nombre }}</h5>
             </div>
 
-            <p class="text-muted small mb-1"><strong>Horario:</strong> {{ Juegos.desc || 'Por confirmar' }}</p>
-            <p class="text-muted small mb-1"><strong>Responsable:</strong> {{ Juegos.responsable || 'Por confirmar' }}</p>
+            <p class="text-muted small mb-1"><strong>Misión:</strong> {{ Juegos.desc || 'Completa todas las especialidades de la EIAO' }}</p>
+            <p class="text-muted small mb-1"><strong>Por:</strong> {{ Juegos.responsable || 'Por confirmar' }}</p>
 
             <div class="d-flex justify-content-between mt-3">
               <a :href="Juegos.url">
@@ -41,12 +43,12 @@ import { ref } from 'vue'
 
 const videojuegos = ref([
   {
-    nombre: "Juego",
+    nombre: "Juego EIAO 95",
     id: "Juegos",
-    desc: "Descripcion",
+    desc: "Completa todas las especialidades de la EIAO",
     responsable: "",
-    img: "VideoJuegos.jpeg",
-    url: "https://google.com"
+    img: "JuegoEIAO95.PNG",
+    url: "https://scratch.mit.edu/projects/1224384126/"
   }
 ])
 </script>
@@ -83,6 +85,15 @@ section {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--primary);
+
+  /* Fondo: Acento secundario (Amarillo brillante en claro, Rojo oscuro en oscuro) */
+  background-color: var(--color-accent-secondary);
+  /* Texto: Color de texto principal (Negro en claro, Blanco en oscuro) */
+  color: var(--color-text);
+  border-top: 6px solid var(--color-card);
+  border-bottom: 6px solid var(--color-orange);
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* ====== TARJETAS ====== */
