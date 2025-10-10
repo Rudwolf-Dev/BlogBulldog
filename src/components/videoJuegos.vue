@@ -25,7 +25,7 @@
             <p class="text-muted small mb-1"><strong>Por:</strong> {{ Juegos.responsable || 'Por confirmar' }}</p>
 
             <div class="d-flex justify-content-between mt-3">
-              <a :href="Juegos.url">
+              <a :href="Juegos.url" target="_blank">
                 <button class="btn btn-outline-theme btn-sm w-100 me-2">
                 <i class="bi bi-controller me-1"></i> Jugar
               </button>
