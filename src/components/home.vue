@@ -76,26 +76,26 @@
 import { ref } from 'vue'
 
 const talleres = ref([
-  { nombre: "Banda de Guerra", url: "/actExt#Banda", icon:"bi bi-palette"},
-  { nombre: "Club de Ajedrez", url: "/actExt#Ajedrez", icon:"bi bi-palette"},
+  { nombre: "Banda de Guerra", url: "/actExt#Banda", icon:"bi bi-flag-fill"},
+  { nombre: "Club de Ajedrez", url: "/actExt#Ajedrez", icon:"bi bi-trophy"},
   { nombre: "Club de Artes", url: "/actExt#Artes", icon:"bi bi-palette" },
-  { nombre: "Danza Folklórica", url: "/actExt#Danza", icon:"bi bi-palette" },
-  { nombre: "Club de Música", url: "/actExt#Música", icon:"bi bi-palette" },
-  { nombre: "Periodismo", url: "/actExt#Foto", icon:"bi bi-palette" },
-  { nombre: "Club de Lectura", url: "/actExt#Lect", icon:"bi bi-palette" },
-  { nombre: "Club de Videojuegos", url: "/actExt#Juegos", icon:"bi bi-palette" },
-  { nombre: "Lenguaje de Señas", url: "/actExt#Señas", icon:"bi bi-palette" },
-  { nombre: "EcoBulldog", url: "/actExt#Eco", icon:"bi bi-palette" },
-  { nombre: "Taller de Robótica", url: "/actExt#Robot", icon:"bi bi-palette" }
+  { nombre: "Danza Folklórica", url: "/actExt#Danza", icon:"bi bi-disc" },
+  { nombre: "Club de Música", url: "/actExt#Música", icon:"bi bi-music-note-beamed" },
+  { nombre: "Periodismo", url: "/actExt#Foto", icon:"bi bi-camera2" },
+  { nombre: "Club de Lectura", url: "/actExt#Lect", icon:"bi bi-book" },
+  { nombre: "Club de Videojuegos", url: "/actExt#Juegos", icon:"bi bi-pc-display-horizontal" },
+  { nombre: "Lenguaje de Señas", url: "/actExt#Señas", icon:"bi bi-hand-thumbs-up" },
+  { nombre: "EcoBulldog", url: "/actExt#Eco", icon:"bi bi-leaf-fill" },
+  { nombre: "Taller de Robótica", url: "/actExt#Robot", icon:"bi bi-gear-fill" }
 ])
 
 const deportes = ref([
-  { nombre: "Softbol y Béisbol", url: "/equiposRep#Soft" },
-  { nombre: "Handball", url: "/equiposRep#Hand" },
-  { nombre: "Fútbol Asociación", url: "/equiposRep#Fut" },
-  { nombre: "Básquetbol", url: "/equiposRep#Basq" },
-  { nombre: "Voleibol de Sala", url: "/equiposRep#Vol" },
-  { nombre: "Tochito Bandera", url: "/equiposRep#Toch" }
+  { nombre: "Softbol y Béisbol", url: "/equiposRep#Soft", icon:"bi bi-circle-fill"},
+  { nombre: "Handball", url: "/equiposRep#Hand", icon:"bi bi-dribbble"},
+  { nombre: "Fútbol Asociación", url: "/equiposRep#Fut", icon:"bi bi-life-preserver"},
+  { nombre: "Básquetbol", url: "/equiposRep#Basq", icon:"bi bi-dribbble"},
+  { nombre: "Voleibol de Sala", url: "/equiposRep#Vol", icon:"bi bi-circle"},
+  { nombre: "Tochito Bandera", url: "/equiposRep#Toch", icon:"bi bi-person-arms-up"}
 ])
 </script>
 
