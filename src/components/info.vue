@@ -1,9 +1,14 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <section class="container py-5">
+  <section class="section-title py-4 d-flex justify-content-between align-items-center">
+    <h2 class="container text-center fw-bold">Información</h2>
+  </section>
+
+  <!-- Secciones -->
+  <section class="container py-3">
     <div v-for="(Seccion, index) in Secciones"
       :key="index">
-      <h2 class="mb-4">{{ Seccion.titulo }}</h2>
+      <h2>{{ Seccion.titulo }}</h2>
       <p v-for="(parrafo, i) in Seccion.texto"
       :key="i">
       {{ parrafo }}
@@ -46,8 +51,24 @@ section {
   color: var(--text-color);
 }
 
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+
+  /* Fondo: Acento secundario (Amarillo brillante en claro, Rojo oscuro en oscuro) */
+  background-color: var(--color-accent-secondary);
+  /* Texto: Color de texto principal (Negro en claro, Blanco en oscuro) */
+  color: var(--color-text);
+  border-top: 6px solid var(--color-card);
+  border-bottom: 6px solid var(--color-orange);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
 .card {
-  background-color: var(--card-bg);
+  background: var(--color-card);
   border-color: var(--card-border);
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
