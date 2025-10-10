@@ -6,6 +6,7 @@
 
   <!-- Secciones -->
   <section class="container py-3">
+    <div class="actividad-card">
     <div v-for="(Seccion, index) in Secciones"
       :key="index">
       <h2>{{ Seccion.titulo }}</h2>
@@ -14,6 +15,7 @@
       {{ parrafo }}
       </p>
       <img src="seccion.img" alt="">
+    </div>
     </div>
   </section>
 </template>
@@ -65,6 +67,16 @@ section {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 32px;
+}
+
+.actividad-card {
+  /* Fondo: Blanco (Color de tarjeta) */
+  background: var(--color-card);
+  border-radius: 8px;
+  padding: 30px;
+  border: none;
+  transition: transform 0.2s ease;
+  border-bottom: 6px solid var(--color-orange);
 }
 
 .card {
