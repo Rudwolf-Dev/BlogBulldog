@@ -33,11 +33,11 @@
 
     },
     {
-    titulo: "Aniversario95-1",
+    titulo: "Aniversario95",
     texto: [
       "Festejamos este aniversario rindiendo un homenaje a la trayectoria de la Preparatoria Álvaro Obregón, mostrando los clubs y deportes actuales. El 4 de Octubre celebramos que la EIAO ha sido y es un pilar significante en la educación."
       ],
-      img:"Aniversario95.jpg"
+      img:"Aniversario95-1.jpg"
     },
     {
     titulo: "Dudas",
