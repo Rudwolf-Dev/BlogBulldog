@@ -111,7 +111,6 @@ const deportes = ref([
   /* Borde inferior: */
   border-bottom: 5px solid var(--color-orange);
   text-align: center;
-  
 }
 
 .title-bulldog {

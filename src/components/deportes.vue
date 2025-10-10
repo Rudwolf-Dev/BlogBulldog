@@ -1,8 +1,10 @@
 <template>
-  <section class="container py-5">
-      <h2 class="mb-4">Equipos Representativos</h2>
+  <section class="section-title py-4 d-flex justify-content-between align-items-center">
+    <h2 class="container text-center fw-bold">Equipos Representativos</h2>
+  </section>
 
     <!-- Buscador -->
+    <section class="container py-5">
     <div class="input-group mb-4">
       <span class="input-group-text">Buscar</span>
       <input v-model="query" type="text" class="form-control" placeholder="Ej. Fútbol, Voleibol, Handball...">
@@ -110,6 +112,21 @@
 /* === Aplicación de las variables === */
 section {
   color: var(--text-color);
+}
+
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+
+  /* Fondo: Acento secundario (Amarillo brillante en claro, Rojo oscuro en oscuro) */
+  background-color: var(--color-accent-secondary);
+  /* Texto: Color de texto principal (Negro en claro, Blanco en oscuro) */
+  color: var(--color-text);
+  border-top: 6px solid var(--color-card);
+  border-bottom: 6px solid var(--color-orange);
+  text-align: center;
+  margin-top: 20px;
 }
 
 .card {
