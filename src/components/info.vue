@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <section class="section-title py-4 d-flex justify-content-between align-items-center">
+  <section class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center">
     <h2 class="container text-center fw-bold">Información</h2>
   </section>
 
@@ -9,14 +9,16 @@
     <div class="actividad-card">
     <div v-for="(Seccion, index) in Secciones"
       :key="index">
+      <br />
       <h2>{{ Seccion.titulo }}</h2>
       <p v-for="(parrafo, i) in Seccion.texto"
       :key="i">
       {{ parrafo }}
       </p>
-      <img width="280px" class="m-md-1"  v-for="(imagenes, i) in Seccion.img"
+      <img width="280px" class="m-md-1" v-for="(imagenes, i) in Seccion.img"
       :key="i" :src="imagenes">
     </div>
+    <br />
     </div>
   </section>
 </template>
@@ -28,13 +30,11 @@
     {
     titulo: "Sobre Nosotros",
     texto: [
-      "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón.",
-      "Cada uno encargado de una parte esencial de la página, el código, diseño y contenido."
+      "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón. Cada uno de nosotros estuvo encargado de una parte esencial de la página: el código, diseño y contenido."
       ],
-
     },
     {
-    titulo: "Aniversario95°",
+    titulo: "Aniversario 95°",
     texto: [
       "Festejamos este aniversario rindiendo un homenaje a la trayectoria de la Preparatoria Álvaro Obregón, mostrando los clubs y deportes actuales. El 4 de Octubre celebramos que la EIAO ha sido y es un pilar significante en la educación."
       ],
@@ -68,7 +68,7 @@ section {
   border-bottom: 6px solid var(--color-orange);
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .actividad-card {
@@ -79,6 +79,8 @@ section {
   border: none;
   transition: transform 0.2s ease;
   border-bottom: 6px solid var(--color-orange);
+  margin-bottom: 25px;
+  padding-top: 20px;
 }
 
 .card {
