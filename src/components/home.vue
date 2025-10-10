@@ -15,7 +15,7 @@
 
     <!-- Bloque de bienvenida -->
     <section class="welcome-section text-center">
-      <div class="">
+      <div>
         <div class="speech-wrapper d-flex align-items-center mx-0">
           <img srcset="" src="./../assets/img/Bulldog.png" class="bulldog-img" alt="Bulldog" width="350">
           <div class="speech-bubble-main me-3">
@@ -111,7 +111,7 @@ const deportes = ref([
   /* Borde inferior: */
   border-bottom: 5px solid var(--color-orange);
   text-align: center;
-  
+
 }
 
 .title-bulldog {
@@ -208,5 +208,7 @@ const deportes = ref([
   color: var(--color-text);
   font-size: 1rem;
 }
-
+.welcome-section {
+  background-image: url("./../assets/img/escuela.jpg");
+}
 </style>
