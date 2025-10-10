@@ -14,7 +14,7 @@
       :key="i">
       {{ parrafo }}
       </p>
-      <img class="w-25 m-md-1"  v-for="(imagenes, i) in Seccion.img"
+      <img width="280px" class="m-md-1"  v-for="(imagenes, i) in Seccion.img"
       :key="i" :src="imagenes">
     </div>
     </div>
