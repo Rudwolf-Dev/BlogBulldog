@@ -71,4 +71,5 @@ npm run build
 ---
 
 ## 📜 Licencia
-Este proyecto está bajo la licencia [CC BY-NC](LICENSE).
+Este proyecto está bajo la licencia [Creative Commons BY-NC 4.0](LICENSE).  
+Se permite su uso y modificación con fines personales o educativos, pero **queda prohibido el uso comercial sin autorización del autor**.
