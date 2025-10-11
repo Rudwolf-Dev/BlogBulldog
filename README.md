@@ -1,37 +1,49 @@
-# Blog Bulldog
+```markdown
+# 🐾 Blog Bulldog
 
-¿Como puedo iniciar a programar?
+Sitio web institucional desarrollado para difundir actividades, clubes y equipos representativos de la escuela.  
+El proyecto fue realizado en **equipo de 3 personas**, aplicando buenas prácticas de desarrollo colaborativo y despliegue en la nube.
 
-## Inicio
-Para empezar debes clonar el repositorio, lo puedes hacer directamente desde [Git](https://git-scm.com/downloads) o usar [Github desktop](https://desktop.github.com/download/)
+## 👥 Equipo de trabajo
+- **Rudwolf-Dev (Rodolfo)** → Desarrollo principal: montaje del código base, integración de componentes, configuración de Vite, ESLint, Prettier y despliegue en Vercel.
+- **tinaenigma** → Diseño visual y estilos, asegurando una interfaz atractiva y coherente.
+- **euclsin** → Redacción y organización del contenido informativo.
 
-Si elegiste git deberas hacerlo con:
-```sh
+## 🚀 Tecnologías utilizadas
+- [Vue 3](https://vuejs.org/) – Framework principal
+- [Vite](https://vitejs.dev/) – Bundler y servidor de desarrollo
+- [JavaScript (ES6+)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [CSS3](https://developer.mozilla.org/es/docs/Web/CSS)
+- [Vitest](https://vitest.dev/) y [Nightwatch](https://nightwatchjs.org/) – Configuración de pruebas
+- [Vercel](https://vercel.com/) – Despliegue automático desde GitHub
+
+## 📦 Instalación y uso
+Clona el repositorio:
+```bash
 git clone https://github.com/Rudwolf-Dev/BlogBulldog.git
 ```
 
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customiza Vite
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Inicio del proyecto
-
-```sh
+Instala dependencias:
+```bash
 npm install
 ```
 
-### Ejecuta para mostrar la pagina incluso si se modifica
-
-```sh
+Ejecuta en modo desarrollo:
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
+Compila para producción:
+```bash
 npm run build
+```
+
+## 🌐 Demo en línea
+👉 [blog-bulldog.vercel.app](https://blog-bulldog.vercel.app/)
+
+## 📚 Aprendizajes clave
+- Trabajo en equipo con división de roles claros.  
+- Uso de control de versiones con GitHub y despliegue continuo en Vercel.  
+- Implementación de linters y formateadores para mantener un código limpio y consistente.  
+- Experiencia en proyectos reales con impacto en la comunidad escolar.
 ```
