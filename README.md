@@ -71,4 +71,4 @@ npm run build
 ---
 
 ## 📜 Licencia
-Este proyecto está bajo la licencia [MIT](LICENSE).
+Este proyecto está bajo la licencia [CC BY-NC](LICENSE).
