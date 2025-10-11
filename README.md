@@ -1,4 +1,3 @@
-```markdown
 # 🐾 Blog Bulldog
 
 Sitio web institucional desarrollado para difundir actividades, clubes y equipos representativos de la escuela.  
