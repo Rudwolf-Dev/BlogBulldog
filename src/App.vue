@@ -1,6 +1,6 @@
 <script setup>
-import navMenu from './components/navMenu.vue';
-import footMenu from './components/footMenu.vue';
+import navMenu from './components/navMenu.vue'
+import footMenu from './components/footMenu.vue'
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import footMenu from './components/footMenu.vue';
     <main>
       <RouterView></RouterView>
     </main>
-    <footer class="footer-bulldog text-center mt-4 pt-4 ">
+    <footer class="footer-bulldog text-center mt-4 pt-4">
       <footMenu></footMenu>
     </footer>
   </div>
@@ -42,7 +42,9 @@ section {
   color: var(--text-color);
   /* Borde superior usando el acento principal */
   border-top: 3px solid var(--color-accent);
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .section-title {
@@ -72,7 +74,8 @@ section {
 }
 
 /* ====== FORMULARIO / INPUTS ====== */
-.input-group-text, .form-control {
+.input-group-text,
+.form-control {
   background-color: var(--input-bg);
   border-color: var(--input-border);
   color: var(--text-color);
@@ -103,6 +106,5 @@ section {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   border-top: 12px solid var(--color-accent-secondary);
-
 }
 </style>

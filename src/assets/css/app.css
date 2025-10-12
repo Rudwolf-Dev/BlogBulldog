@@ -1,5 +1,5 @@
-@import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
-@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 /*
  * === VARIABLES GLOBALES DE TEMA (app.css) ===
  * Adaptadas a la paleta institucional: Rojo, Amarillo, Azul.
@@ -7,7 +7,7 @@
 
 /* === Tema claro === */
 :root,
-[data-bs-theme="light"] {
+[data-bs-theme='light'] {
   /* Colores principales de la paleta */
   --color-bg: #ccc6b6; /* Fondo principal: Beige/Gris claro */
   --color-text: #000000; /* Texto principal: Negro */
@@ -34,16 +34,19 @@
 }
 
 /* --- Estilos esenciales para el Sticky Footer (General) --- */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   background-color: var(--bg-color);
   color: var(--color-text);
-  transition: background-color 0.8s, color 0.8s;
+  transition:
+    background-color 0.8s,
+    color 0.8s;
 }
 
 .hammersmith-one-regular {
-  font-family: "Hammersmith One", sans-serif;
+  font-family: 'Hammersmith One', sans-serif;
   font-weight: 400;
   font-style: normal;
 }

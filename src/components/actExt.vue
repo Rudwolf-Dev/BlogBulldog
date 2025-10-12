@@ -1,10 +1,12 @@
 <template>
-  <section class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center">
+  <section
+    class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center"
+  >
     <h2 class="container text-center fw-bold">Actividades Extracurriculares</h2>
   </section>
 
-    <!-- Buscador -->
-    <section class="container py-5">
+  <!-- Buscador -->
+  <section class="container py-5">
     <div class="input-group mb-5 shadow-sm">
       <span class="input-group-text">
         <i class="bi bi-search"></i>
@@ -14,19 +16,14 @@
         type="text"
         class="form-control"
         placeholder="Ej. Ajedrez, Música, Robótica..."
-      >
+      />
     </div>
 
     <div class="row g-4">
-      <div
-        v-for="club in filteredClubs"
-        :key="club.nombre"
-        :id="club.id"
-        class="col-md-4 col-sm-6"
-      >
+      <div v-for="club in filteredClubs" :key="club.nombre" :id="club.id" class="col-md-4 col-sm-6">
         <div class="card actividad-card h-100 border-0 shadow-hover">
           <div class="img-wrapper">
-            <img :src="club.img" class="card-img-top" :alt="club.nombre">
+            <img :src="club.img" class="card-img-top" :alt="club.nombre" />
           </div>
 
           <div class="card-body">
@@ -34,9 +31,15 @@
               <h5 class="card-title fw-bold">{{ club.nombre }}</h5>
             </div>
 
-            <p class="text-muted small mb-1"><strong>Horario:</strong> {{ club.desc || 'Por confirmar' }}</p>
-            <p class="text-muted small mb-1"><strong>Responsable:</strong> {{ club.responsable || 'Por confirmar' }}</p>
-            <p class="text-muted small"><strong>Alumnos inscritos:</strong> {{ club.alumnos ?? 'Por confirmar' }}</p>
+            <p class="text-muted small mb-1">
+              <strong>Horario:</strong> {{ club.desc || 'Por confirmar' }}
+            </p>
+            <p class="text-muted small mb-1">
+              <strong>Responsable:</strong> {{ club.responsable || 'Por confirmar' }}
+            </p>
+            <p class="text-muted small">
+              <strong>Alumnos inscritos:</strong> {{ club.alumnos ?? 'Por confirmar' }}
+            </p>
 
             <div class="d-flex justify-content-between mt-3">
               <button
@@ -57,39 +60,59 @@
         </div>
       </div>
     </div>
-<!-- Modal con Carrusel -->
-<div class="modal fade" id="modalFotos" tabindex="-1" aria-labelledby="modalFotosLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalFotosLabel">Fotos del Club</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <div id="carouselFotos" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div
-              v-for="(img, index) in imagenesActuales"
-              :key="index"
-              :class="['carousel-item', { active: index === 0 }]"
-            >
-              <img :src="img" class="d-block w-100 rounded" alt="Foto del club">
+    <!-- Modal con Carrusel -->
+    <div
+      class="modal fade"
+      id="modalFotos"
+      tabindex="-1"
+      aria-labelledby="modalFotosLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalFotosLabel">Fotos del Club</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselFotos" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div
+                  v-for="(img, index) in imagenesActuales"
+                  :key="index"
+                  :class="['carousel-item', { active: index === 0 }]"
+                >
+                  <img :src="img" class="d-block w-100 rounded" alt="Foto del club" />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselFotos"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselFotos"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselFotos" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
   </section>
 </template>
 
@@ -98,23 +121,18 @@ import { ref, computed } from 'vue'
 import * as bootstrap from 'bootstrap'
 
 const imagenesPorClub = {
-  "Club de Videojuegos": ["VideoJuegos.jpeg"],
-  "Banda de Guerra": ["banda de guerra.jpg"],
-  "Club de Ajedrez": ["ajedrez.jpeg"],
-  "Danza Folklórica": ["danza 2.jpg", "DANZA 3.jpg"],
-  "Periodismo": [
-    "periodismo.jpg",
-    "periodismo 2.jpg",
-    "periodismo 3.jpg"
-  ],
-  "Club de Música": ["musica.jpg", "musica 2.jpg"],
-  "Club de Artes": ["Artes.jpeg"],
-  "Club de Lectura": ["lectura.jpg"],
-  "Lenguaje de Señas": ["señas.jpeg"],
-  "EcoBulldog": ["eco.jpeg"],
-  "Taller de Robótica": ["robotica.jpg"]
+  'Club de Videojuegos': ['VideoJuegos.jpeg'],
+  'Banda de Guerra': ['banda de guerra.jpg'],
+  'Club de Ajedrez': ['ajedrez.jpeg'],
+  'Danza Folklórica': ['danza 2.jpg', 'DANZA 3.jpg'],
+  Periodismo: ['periodismo.jpg', 'periodismo 2.jpg', 'periodismo 3.jpg'],
+  'Club de Música': ['musica.jpg', 'musica 2.jpg'],
+  'Club de Artes': ['Artes.jpeg'],
+  'Club de Lectura': ['lectura.jpg'],
+  'Lenguaje de Señas': ['señas.jpeg'],
+  EcoBulldog: ['eco.jpeg'],
+  'Taller de Robótica': ['robotica.jpg'],
 }
-
 
 const imagenesActuales = ref([])
 
@@ -128,96 +146,107 @@ const verFotos = (nombre) => {
   }
 }
 
-
 const query = ref('')
 
 const clubs = ref([
-  { nombre: "Club de Videojuegos",
-    id: "Juegos",
-    desc: "Sábado 10:00-12:00pm. Sala de Programación Web",
-    responsable: "Mtro. Juan Martínez",
+  {
+    nombre: 'Club de Videojuegos',
+    id: 'Juegos',
+    desc: 'Sábado 10:00-12:00pm. Sala de Programación Web',
+    responsable: 'Mtro. Juan Martínez',
     alumnos: null,
-    img: "VideoJuegos.jpeg"
+    img: 'VideoJuegos.jpeg',
   },
-  { nombre: "Banda de Guerra",
-  id: "Banda",
-    desc: "Jueves 5:10-6:50pm, Sábado 12:50-1:30pm. Cancha Polivalente",
-    responsable: "Ing. Joel Cuellar",
+  {
+    nombre: 'Banda de Guerra',
+    id: 'Banda',
+    desc: 'Jueves 5:10-6:50pm, Sábado 12:50-1:30pm. Cancha Polivalente',
+    responsable: 'Ing. Joel Cuellar',
     alumnos: null,
-    img: "banda de guerra.jpg"
+    img: 'banda de guerra.jpg',
   },
-  { nombre: "Club de Ajedrez",
-    id: "Ajedrez",
-    desc: "Jueves 2:00-3:00pm. Biblioteca",
-    responsable: "Lic. Roberto Rincón",
+  {
+    nombre: 'Club de Ajedrez',
+    id: 'Ajedrez',
+    desc: 'Jueves 2:00-3:00pm. Biblioteca',
+    responsable: 'Lic. Roberto Rincón',
     alumnos: 17,
-    img: "ajedrez.jpeg",
+    img: 'ajedrez.jpeg',
   },
-  { nombre: "Club de Artes",
-    id: "Artes",
-    desc: "Sábado 9:00-11:00am. Biblioteca",
-    responsable: "Mtro. Juan Martínez",
+  {
+    nombre: 'Club de Artes',
+    id: 'Artes',
+    desc: 'Sábado 9:00-11:00am. Biblioteca',
+    responsable: 'Mtro. Juan Martínez',
     alumnos: 20,
-    img: "Artes.jpeg"
+    img: 'Artes.jpeg',
   },
-  { nombre: "Danza Folklórica",
-    id: "Danza",
-    desc: "Lunes 12:00-1:00pm. Cancha Polivalente",
-    responsable: "Mtro. Brayan López",
+  {
+    nombre: 'Danza Folklórica',
+    id: 'Danza',
+    desc: 'Lunes 12:00-1:00pm. Cancha Polivalente',
+    responsable: 'Mtro. Brayan López',
     alumnos: 19,
-    img: "danza.jpg",
+    img: 'danza.jpg',
   },
-  { nombre: "Club de Música",
-    id: "Música",
-    desc: "Jueves 1:00-2:30pm. Laboratorio de Biología",
-    responsable: "Ing. Jaqueline Garza",
+  {
+    nombre: 'Club de Música',
+    id: 'Música',
+    desc: 'Jueves 1:00-2:30pm. Laboratorio de Biología',
+    responsable: 'Ing. Jaqueline Garza',
     alumnos: 10,
-    img: "musica.jpg",
+    img: 'musica.jpg',
   },
-  { nombre: "Periodismo",
-    id: "Foto",
-    desc: "Sábado 10:00-11:30am. Aula 410",
-    responsable: "Lic. Román Garza",
+  {
+    nombre: 'Periodismo',
+    id: 'Foto',
+    desc: 'Sábado 10:00-11:30am. Aula 410',
+    responsable: 'Lic. Román Garza',
     alumnos: null,
-    img: "periodismo.jpg"
+    img: 'periodismo.jpg',
   },
-  { nombre: "Club de Lectura",
-    id: "Lect",
-    desc: "Miércoles 1:00-1:50pm. Biblioteca",
-    responsable: "Lic. Lesly González",
+  {
+    nombre: 'Club de Lectura',
+    id: 'Lect',
+    desc: 'Miércoles 1:00-1:50pm. Biblioteca',
+    responsable: 'Lic. Lesly González',
     alumnos: null,
-    img: "lectura.jpg"
+    img: 'lectura.jpg',
   },
-  { nombre: "Lenguaje de Señas",
-    id: "Señas",
-    desc: "Sábado 10:00-11:00am. Aula 402",
-    responsable: "Lic. Cecilia García",
+  {
+    nombre: 'Lenguaje de Señas',
+    id: 'Señas',
+    desc: 'Sábado 10:00-11:00am. Aula 402',
+    responsable: 'Lic. Cecilia García',
     alumnos: 13,
-    img: "señas.jpeg"
+    img: 'señas.jpeg',
   },
-  { nombre: "EcoBulldog",
-    id: "Eco",
-    desc: "Martes 1:00-2:00pm. Laboratorio de Biología",
-    responsable: "Ing. Lucero Hinojosa",
+  {
+    nombre: 'EcoBulldog',
+    id: 'Eco',
+    desc: 'Martes 1:00-2:00pm. Laboratorio de Biología',
+    responsable: 'Ing. Lucero Hinojosa',
     alumnos: null,
-    img: "eco.jpeg"
+    img: 'eco.jpeg',
   },
-  { nombre: "Taller de Robótica",
-    id: "Robot",
+  {
+    nombre: 'Taller de Robótica',
+    id: 'Robot',
     desc: null,
     responsable: null,
     alumnos: 18,
-    img: "robotica.jpg"
-  }
+    img: 'robotica.jpg',
+  },
 ])
 
 const filteredClubs = computed(() => {
   const q = query.value.trim().toLowerCase()
   if (!q) return clubs.value
-  return clubs.value.filter(c =>
-    c.nombre.toLowerCase().includes(q) ||
-    (c.responsable?.toLowerCase().includes(q)) ||
-    (c.desc?.toLowerCase().includes(q))
+  return clubs.value.filter(
+    (c) =>
+      c.nombre.toLowerCase().includes(q) ||
+      c.responsable?.toLowerCase().includes(q) ||
+      c.desc?.toLowerCase().includes(q),
   )
 })
 </script>
@@ -225,7 +254,7 @@ const filteredClubs = computed(() => {
 <style scoped>
 /* ====== VARIABLES DE COLOR ====== */
 :root,
-[data-bs-theme="light"] {
+[data-bs-theme='light'] {
   --bg-color: #f8f9fa;
   --text-color: #212529;
   --card-bg: #ffffff;
@@ -234,7 +263,7 @@ const filteredClubs = computed(() => {
   --accent: #ffc107;
 }
 
-[data-bs-theme="dark"] {
+[data-bs-theme='dark'] {
   --bg-color: #121212;
   --text-color: #e9ecef;
   --card-bg: #1e1e1e;
@@ -247,7 +276,9 @@ const filteredClubs = computed(() => {
 section {
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .section-title {
@@ -270,7 +301,10 @@ section {
   background-color: var(--card-bg);
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s;
 }
 
 .shadow-hover:hover {
@@ -347,4 +381,3 @@ section {
   font-weight: 500;
 }
 </style>
-

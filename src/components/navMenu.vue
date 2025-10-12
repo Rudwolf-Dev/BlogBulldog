@@ -1,11 +1,19 @@
 <template>
   <nav class="navbar navbar-expand-lg nav-bulldog">
     <div class="container-fluid">
-      <router-link class="no-bg navbar-brand d-flex align-items-center text-white fw-bold p-2" to="/">
+      <router-link
+        class="no-bg navbar-brand d-flex align-items-center text-white fw-bold p-2"
+        to="/"
+      >
         BLOG BULLDOG
       </router-link>
 
-      <button class="navbar-toggler border-0 text-white bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button
+        class="navbar-toggler border-0 text-white bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -15,19 +23,27 @@
             <router-link class="nav-link text-white fw-semibold px-3" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/actExt">Actividades Extracurriculares</router-link>
+            <router-link class="nav-link text-white fw-semibold px-3" to="/actExt"
+              >Actividades Extracurriculares</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/equiposRep">Equipos Representativos</router-link>
+            <router-link class="nav-link text-white fw-semibold px-3" to="/equiposRep"
+              >Equipos Representativos</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/videoJuegos">VideoJuegos</router-link>
+            <router-link class="nav-link text-white fw-semibold px-3" to="/videoJuegos"
+              >VideoJuegos</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/info">Información</router-link>
+            <router-link class="nav-link text-white fw-semibold px-3" to="/info"
+              >Información</router-link
+            >
           </li>
         </ul>
-<!--
+        <!--
         <button
           id="btnTema"
           @click="cambiarTema"
@@ -41,7 +57,6 @@
   </nav>
 </template>
 
-
 <style scoped>
 .nav-bulldog {
   /* Fondo principal: El rojo/vino oscuro de la paleta. */
@@ -54,7 +69,9 @@
 }
 
 .nav-bulldog .nav-link {
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
   margin: 0 10px 0 10px;
 }
 
@@ -69,6 +86,6 @@
 .hover-secondary .router-link-active,
 .hover-secondary .nav-link:hover {
   background-color: var(--color-accent-secondary);
-   color: #000000 !important;
+  color: #000000 !important;
 }
 </style>

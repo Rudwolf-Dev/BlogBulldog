@@ -1,51 +1,61 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <section class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center">
+  <section
+    class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center"
+  >
     <h2 class="container text-center fw-bold">Información</h2>
   </section>
 
   <!-- Secciones -->
   <section class="container py-3">
     <div class="actividad-card">
-    <div v-for="(Seccion, index) in Secciones"
-      :key="index">
+      <div v-for="(Seccion, index) in Secciones" :key="index">
+        <br />
+        <h2>{{ Seccion.titulo }}</h2>
+        <p v-for="(parrafo, i) in Seccion.texto" :key="i">
+          {{ parrafo }}
+        </p>
+        <img
+          width="280px"
+          class="m-md-1"
+          v-for="(imagenes, i) in Seccion.img"
+          :key="i"
+          :src="imagenes"
+        />
+      </div>
       <br />
-      <h2>{{ Seccion.titulo }}</h2>
-      <p v-for="(parrafo, i) in Seccion.texto"
-      :key="i">
-      {{ parrafo }}
-      </p>
-      <img width="280px" class="m-md-1" v-for="(imagenes, i) in Seccion.img"
-      :key="i" :src="imagenes">
-    </div>
-    <br />
     </div>
   </section>
 </template>
 
 <script setup scoped>
-  import { ref } from 'vue'
+import { ref } from 'vue'
 
-  const Secciones = ref([
-    {
-    titulo: "Sobre Nosotros",
+const Secciones = ref([
+  {
+    titulo: 'Sobre Nosotros',
     texto: [
-      "Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón. Cada uno de nosotros estuvo encargado de una parte esencial de la página: el código, diseño y contenido."
-      ],
-    },
-    {
-    titulo: "Aniversario 95°",
+      'Nuestro equipo desarrollador está conformado por tres integrantes: Rodolfo Pérez Martínez, Sara Giselle Méndez Gaona y Alondra Sofía Padilla Calderón. Cada uno de nosotros estuvo encargado de una parte esencial de la página: el código, diseño y contenido.',
+    ],
+  },
+  {
+    titulo: 'Aniversario 95°',
     texto: [
-      "Festejamos este aniversario rindiendo un homenaje a la trayectoria de la Preparatoria Álvaro Obregón, mostrando los clubs y deportes actuales. El 4 de Octubre celebramos que la EIAO ha sido y es un pilar significante en la educación."
-      ],
-      img:["Aniversario95-1.jpg","Aniversario95-2.jpg","Aniversario95-3.jpg","Aniversario95-4.jpg"]
-    },
-    {
-    titulo: "Dudas",
+      'Festejamos este aniversario rindiendo un homenaje a la trayectoria de la Preparatoria Álvaro Obregón, mostrando los clubs y deportes actuales. El 4 de Octubre celebramos que la EIAO ha sido y es un pilar significante en la educación.',
+    ],
+    img: [
+      'Aniversario95-1.jpg',
+      'Aniversario95-2.jpg',
+      'Aniversario95-3.jpg',
+      'Aniversario95-4.jpg',
+    ],
+  },
+  {
+    titulo: 'Dudas',
     texto: [
-      "Si tienes alguna duda sobre los clubs culturales puedes dirigirte con la Mtra. Jaqueline Garza en prefectura o en el caso de ser acerca de los deportes puedes preguntar en la oficina de Coordinación Deportiva."
-      ]
-    }
+      'Si tienes alguna duda sobre los clubs culturales puedes dirigirte con la Mtra. Jaqueline Garza en prefectura o en el caso de ser acerca de los deportes puedes preguntar en la oficina de Coordinación Deportiva.',
+    ],
+  },
 ])
 </script>
 
@@ -86,7 +96,10 @@ section {
 .card {
   background: var(--color-card);
   border-color: var(--card-border);
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s;
 }
 
 .input-group-text {

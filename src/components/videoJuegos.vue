@@ -1,19 +1,16 @@
 <template>
-  <section class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center">
+  <section
+    class="section-title hammersmith-one-regular py-4 d-flex justify-content-between align-items-center"
+  >
     <h2 class="container text-center fw-bold">Videojuegos</h2>
   </section>
 
   <section class="container py-5">
     <div class="row g-4">
-      <div
-        v-for="Juegos in videojuegos"
-        :key="Juegos.nombre"
-        :id="Juegos.id"
-        class="col-md-6 mb-4"
-      >
+      <div v-for="Juegos in videojuegos" :key="Juegos.nombre" :id="Juegos.id" class="col-md-6 mb-4">
         <div class="card actividad-card h-100 border-0 shadow-hover">
           <div class="img-wrapper">
-            <img :src="Juegos.img" class="card-img-top" :alt="Juegos.nombre">
+            <img :src="Juegos.img" class="card-img-top" :alt="Juegos.nombre" />
           </div>
 
           <div class="card-body">
@@ -21,14 +18,19 @@
               <h5 class="card-title fw-bold">{{ Juegos.nombre }}</h5>
             </div>
 
-            <p class="text-muted small mb-1"><strong>Misión:</strong> {{ Juegos.desc || 'Completa todas las especialidades de la EIAO' }}</p>
-            <p class="text-muted small mb-1"><strong>Por:</strong> {{ Juegos.responsable || 'Por confirmar' }}</p>
+            <p class="text-muted small mb-1">
+              <strong>Misión:</strong>
+              {{ Juegos.desc || 'Completa todas las especialidades de la EIAO' }}
+            </p>
+            <p class="text-muted small mb-1">
+              <strong>Por:</strong> {{ Juegos.responsable || 'Por confirmar' }}
+            </p>
 
             <div class="d-flex justify-content-between mt-3">
               <a :href="Juegos.url" target="_blank">
                 <button class="btn btn-outline-theme btn-sm w-100 me-2">
-                <i class="bi bi-controller me-1"></i> Jugar
-              </button>
+                  <i class="bi bi-controller me-1"></i> Jugar
+                </button>
               </a>
             </div>
           </div>
@@ -43,25 +45,21 @@ import { ref } from 'vue'
 
 const videojuegos = ref([
   {
-    nombre: "Juego EIAO 95",
-    id: "Juegos",
-    desc: "Completa todas las especialidades de la EIAO",
-    responsable: "5L4",
-    img: "JuegoEIAO95.png",
-    url: "https://scratch.mit.edu/projects/1224384126/",
-    screenshot: [
-      "JuegoEIAO95-1.png",
-      "JuegoEIAO95-2.png",
-      "JuegoEIAO95-3.png"
-    ]
-  }
+    nombre: 'Juego EIAO 95',
+    id: 'Juegos',
+    desc: 'Completa todas las especialidades de la EIAO',
+    responsable: '5L4',
+    img: 'JuegoEIAO95.png',
+    url: 'https://scratch.mit.edu/projects/1224384126/',
+    screenshot: ['JuegoEIAO95-1.png', 'JuegoEIAO95-2.png', 'JuegoEIAO95-3.png'],
+  },
 ])
 </script>
 
 <style scoped>
 /* ====== VARIABLES DE COLOR ====== */
 :root,
-[data-bs-theme="light"] {
+[data-bs-theme='light'] {
   --bg-color: #f8f9fa;
   --text-color: #212529;
   --card-bg: #ffffff;
@@ -70,7 +68,7 @@ const videojuegos = ref([
   --accent: #ffc107;
 }
 
-[data-bs-theme="dark"] {
+[data-bs-theme='dark'] {
   --bg-color: #121212;
   --text-color: #e9ecef;
   --card-bg: #1e1e1e;
@@ -83,7 +81,9 @@ const videojuegos = ref([
 section {
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .section-title {
@@ -106,7 +106,10 @@ section {
   background-color: var(--card-bg);
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s;
 }
 
 .shadow-hover:hover {

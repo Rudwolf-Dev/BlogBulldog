@@ -1,16 +1,15 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="home-bulldog">
-
     <!-- Encabezado superior -->
     <header class="header-bulldog text-white hammersmith-one-regular py-4 row">
       <div class="container d-flex justify-content-between align-items-center">
-        <img src="./../assets/img/UANL-logo.png" alt="UANL"/>
+        <img src="./../assets/img/UANL-logo.png" alt="UANL" />
         <div class="text-center col-3">
           <h1 class="text-black fw-bold title-bulldog">BLOG BULLDOG</h1>
           <h4 class="text-dark fw-semibold mb-0">EIAO Linares</h4>
         </div>
-        <img src="./../assets/img/EIAO-logo.png" alt="EIAO"/>
+        <img src="./../assets/img/EIAO-logo.png" alt="EIAO" />
       </div>
     </header>
 
@@ -18,15 +17,23 @@
     <section class="welcome-section text-center">
       <div>
         <div class="speech-wrapper mx-0">
-          <img src="./../assets/img/Bulldog.png" class="bulldog-img col-2" alt="Bulldog" width="360px">
+          <img
+            src="./../assets/img/Bulldog.png"
+            class="bulldog-img col-2"
+            alt="Bulldog"
+            width="360px"
+          />
           <div class="speech-bubble-main me-3 w-75">
             <p class="fw-semibold">¡Bienvenidos a mi blog!</p>
             <p class="mb-0">
-              En este puedes aprender sobre las distintas actividades que se realizan fuera de clases en nuestra unidad EIAO linares. Aquí puedes encontrar información y fotos de todos los clubs y deportes a los que te puedes unir iniciando el semestre, algunos de estos fueron implementados recientemente y han apoyado al crecimiento de las generaciones.
-              Hecha un vistazo a nuestras actividades extracurriculares, equipos representativos así como más información sobre el sitio web.
+              En este puedes aprender sobre las distintas actividades que se realizan fuera de
+              clases en nuestra unidad EIAO linares. Aquí puedes encontrar información y fotos de
+              todos los clubs y deportes a los que te puedes unir iniciando el semestre, algunos de
+              estos fueron implementados recientemente y han apoyado al crecimiento de las
+              generaciones. Hecha un vistazo a nuestras actividades extracurriculares, equipos
+              representativos así como más información sobre el sitio web.
             </p>
           </div>
-
         </div>
       </div>
     </section>
@@ -41,13 +48,13 @@
       <h3 class="fw-bold text-uppercase mb-4">Clubes y Talleres</h3>
       <div class="row g-4 justify-content-center">
         <div v-for="taller in talleres" :key="taller.nombre" class="col-lg-4 col-md-6">
-          <a :href="taller.url" class=" text-decoration-none">
+          <a :href="taller.url" class="text-decoration-none">
             <div class="actividad-card">
-            <div class="circle">
-              <span><i :class="taller.icon"></i></span>
+              <div class="circle">
+                <span><i :class="taller.icon"></i></span>
+              </div>
+              <p class="actividad-nombre">{{ taller.nombre }}</p>
             </div>
-            <p class="actividad-nombre">{{ taller.nombre }}</p>
-          </div>
           </a>
         </div>
       </div>
@@ -58,14 +65,14 @@
       <h3 class="fw-bold text-uppercase mb-4">Deportes</h3>
       <div class="row g-4 justify-content-center">
         <div v-for="deporte in deportes" :key="deporte.nombre" class="col-lg-4 col-md-6">
-          <a :href="deporte.url" class=" text-decoration-none">
+          <a :href="deporte.url" class="text-decoration-none">
             <div class="actividad-card">
-            <div class="circle">
-              <span><i :class="deporte.icon"></i></span>
+              <div class="circle">
+                <span><i :class="deporte.icon"></i></span>
+              </div>
+              <p class="actividad-nombre">{{ deporte.nombre }}</p>
             </div>
-            <p class="actividad-nombre">{{ deporte.nombre }}</p>
-          </div>
-        </a>
+          </a>
         </div>
       </div>
     </section>
@@ -76,31 +83,30 @@
 import { ref } from 'vue'
 
 const talleres = ref([
-  { nombre: "Banda de Guerra", url: "/actExt#Banda", icon:"bi bi-flag-fill"},
-  { nombre: "Club de Ajedrez", url: "/actExt#Ajedrez", icon:"bi bi-trophy"},
-  { nombre: "Club de Artes", url: "/actExt#Artes", icon:"bi bi-palette" },
-  { nombre: "Danza Folklórica", url: "/actExt#Danza", icon:"bi bi-disc" },
-  { nombre: "Club de Música", url: "/actExt#Música", icon:"bi bi-music-note-beamed" },
-  { nombre: "Periodismo", url: "/actExt#Foto", icon:"bi bi-camera2" },
-  { nombre: "Club de Lectura", url: "/actExt#Lect", icon:"bi bi-book" },
-  { nombre: "Club de Videojuegos", url: "/actExt#Juegos", icon:"bi bi-pc-display-horizontal" },
-  { nombre: "Lenguaje de Señas", url: "/actExt#Señas", icon:"bi bi-hand-thumbs-up" },
-  { nombre: "EcoBulldog", url: "/actExt#Eco", icon:"bi bi-leaf-fill" },
-  { nombre: "Taller de Robótica", url: "/actExt#Robot", icon:"bi bi-gear-fill" }
+  { nombre: 'Banda de Guerra', url: '/actExt#Banda', icon: 'bi bi-flag-fill' },
+  { nombre: 'Club de Ajedrez', url: '/actExt#Ajedrez', icon: 'bi bi-trophy' },
+  { nombre: 'Club de Artes', url: '/actExt#Artes', icon: 'bi bi-palette' },
+  { nombre: 'Danza Folklórica', url: '/actExt#Danza', icon: 'bi bi-disc' },
+  { nombre: 'Club de Música', url: '/actExt#Música', icon: 'bi bi-music-note-beamed' },
+  { nombre: 'Periodismo', url: '/actExt#Foto', icon: 'bi bi-camera2' },
+  { nombre: 'Club de Lectura', url: '/actExt#Lect', icon: 'bi bi-book' },
+  { nombre: 'Club de Videojuegos', url: '/actExt#Juegos', icon: 'bi bi-pc-display-horizontal' },
+  { nombre: 'Lenguaje de Señas', url: '/actExt#Señas', icon: 'bi bi-hand-thumbs-up' },
+  { nombre: 'EcoBulldog', url: '/actExt#Eco', icon: 'bi bi-leaf-fill' },
+  { nombre: 'Taller de Robótica', url: '/actExt#Robot', icon: 'bi bi-gear-fill' },
 ])
 
 const deportes = ref([
-  { nombre: "Softbol y Béisbol", url: "/equiposRep#Soft", icon:"bi bi-circle-fill"},
-  { nombre: "Handball", url: "/equiposRep#Hand", icon:"bi bi-dribbble"},
-  { nombre: "Fútbol Asociación", url: "/equiposRep#Fut", icon:"bi bi-life-preserver"},
-  { nombre: "Básquetbol", url: "/equiposRep#Basq", icon:"bi bi-dribbble"},
-  { nombre: "Voleibol de Sala", url: "/equiposRep#Vol", icon:"bi bi-circle"},
-  { nombre: "Tochito Bandera", url: "/equiposRep#Toch", icon:"bi bi-person-arms-up"}
+  { nombre: 'Softbol y Béisbol', url: '/equiposRep#Soft', icon: 'bi bi-circle-fill' },
+  { nombre: 'Handball', url: '/equiposRep#Hand', icon: 'bi bi-dribbble' },
+  { nombre: 'Fútbol Asociación', url: '/equiposRep#Fut', icon: 'bi bi-life-preserver' },
+  { nombre: 'Básquetbol', url: '/equiposRep#Basq', icon: 'bi bi-dribbble' },
+  { nombre: 'Voleibol de Sala', url: '/equiposRep#Vol', icon: 'bi bi-circle' },
+  { nombre: 'Tochito Bandera', url: '/equiposRep#Toch', icon: 'bi bi-person-arms-up' },
 ])
 </script>
 
 <style scoped>
-
 .home-bulldog {
   /* Fondo principal: Usa el color de fondo general del tema. */
   background-color: var(--color-bg);
@@ -148,7 +154,7 @@ const deportes = ref([
 }
 
 .speech-bubble-main::after {
-  content: "";
+  content: '';
   position: absolute;
   left: -33px;
   top: 85%;
@@ -162,8 +168,8 @@ const deportes = ref([
 
 /* Escritorio: imagen a la izquierda, burbuja a la derecha */
 .speech-wrapper {
-  display: flex;               /* asegura flex aunque esté el d-flex de Bootstrap */
-  flex-direction: row;         /* fila en desktop */
+  display: flex; /* asegura flex aunque esté el d-flex de Bootstrap */
+  flex-direction: row; /* fila en desktop */
   align-items: center;
   justify-content: flex-start; /* burbuja a la derecha del bulldog */
   gap: 1rem;
@@ -187,16 +193,15 @@ const deportes = ref([
   }
   /* Punta de la burbuja apuntando hacia abajo hacia el bulldog */
   .speech-bubble-main::after {
-    content: "";
+    content: '';
     position: absolute;
-    bottom: -18px;                  /* coloca la punta abajo */
-    left: 25px;                     /* cerca del borde izquierdo (apuntando al perro) */
+    bottom: -18px; /* coloca la punta abajo */
+    left: 25px; /* cerca del borde izquierdo (apuntando al perro) */
     border-width: 10px;
     border-style: solid;
     border-color: #fe7200 transparent transparent transparent;
   }
 }
-
 
 /* ---------- SECCIÓN AMARILLA ---------- */
 .bg-yellow {
@@ -252,5 +257,4 @@ const deportes = ref([
   background-position: center;
   background-repeat: no-repeat;
 }
-
 </style>

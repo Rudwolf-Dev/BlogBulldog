@@ -14,7 +14,7 @@ const router = createRouter({
     { path: '/actExt', component: actExt },
     { path: '/equiposRep', component: deportes },
     { path: '/videoJuegos', component: videoJuegos },
-    { path: '/casiTodos', component: holaSlenderman }
+    { path: '/casiTodos', component: holaSlenderman },
   ],
 })
 
