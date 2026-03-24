@@ -42,6 +42,11 @@
               >Información</router-link
             >
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link text-white fw-semibold px-3" to="/casiTodos"
+              >Secreto</router-link
+            >
+          </li>
         </ul>
         <!--
         <button
