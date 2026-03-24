@@ -1,7 +1,7 @@
 <template>
   <iframe
-    src="https://www.youtube.com/embed/E7WjGlI9dgA?list=RDE7WjGlI9dgA"
-    title="El amar y el querer -Slenderman "
+    src="https://youtu.be/dVNIoMSMr7s?si=aFH856c4dnHDPZwX"
+    title="Ozuna"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
