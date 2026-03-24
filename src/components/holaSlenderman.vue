@@ -1,7 +1,7 @@
 <template>
-  <iframe src="https://www.youtube.com/embed/dVNIoMSMr7s?list=RDdVNIoMSMr7s" title="Ozuna-el farsante (saturado)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
-  </iframe>
+  <video class=" mx-5 rounded-2 container-md" controls height="auto" width="auto">
+  <source src="./../assets/img/ozuna.mp4" type="video/mp4">
+  </video>
 </template>
 
 <style lang="css" scoped>
