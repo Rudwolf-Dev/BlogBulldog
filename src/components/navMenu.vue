@@ -43,7 +43,7 @@
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-semibold px-3" to="/casiTodos"
+            <router-link class="nav-link text-white fw-semibold px-3 opacity-25" to="/casiTodos"
               >Secreto</router-link
             >
           </li>
